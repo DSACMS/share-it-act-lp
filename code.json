@@ -1,0 +1,48 @@
+{
+  "name": "share-it-act-website",
+  "description": "",
+  "longDescription": "",
+  "status": "",
+  "permissions": {
+    "license": [
+      {
+        "name": "",
+        "URL": ""
+      }
+    ],
+    "usageType": "",
+    "exemptionText": ""
+  },
+  "organization": "",
+  "repositoryURL": "https://github.com/DSACMS/share-it-act-website",
+  "vcs": "git",
+  "laborHours": 3199,
+  "platforms": [],
+  "categories": [],
+  "softwareType": "",
+  "languages": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "maintenance": "",
+  "date": {
+    "created": "2025-04-08T14:25:37Z",
+    "lastModified": "2025-04-09T21:23:45Z",
+    "metaDataLastUpdated": "2025-04-09T21:24:50.219Z"
+  },
+  "tags": [],
+  "contact": {
+    "email": "",
+    "name": ""
+  },
+  "localisation": false,
+  "repositoryType": "",
+  "userInput": false,
+  "fismaLevel": "",
+  "group": "",
+  "subsetInHealthcare": [],
+  "userType": [],
+  "repositoryHost": "github",
+  "maturityModelTier": 0
+}
