@@ -1,48 +1,83 @@
 {
-  "name": "share-it-act-website",
-  "description": "",
-  "longDescription": "",
-  "status": "",
+  "name": "share-it-act-lp",
+  "description": "Guide to the SHARE IT Act helping federal agencies comply with software code sharing requirements.",
+  "longDescription": "The SHARE IT Act Landing Page provides comprehensive documentation, tools, and guidance to help federal agencies comply with the Source Code Harmonization And Reuse in Information Technology (SHARE IT) Act. This legislation requires federal agencies to share custom-developed software code, including metadata about the project, with each other to eliminate duplicative government work. The website offers resources for generating, validating, and maintaining code.json files, alongside implementation guides and standards documentation.",
+  "status": "Production",
   "permissions": {
     "license": [
       {
-        "name": "",
-        "URL": ""
+        "name": "CC0-1.0",
+        "URL": "https://creativecommons.org/publicdomain/zero/1.0/"
       }
     ],
-    "usageType": "",
+    "usageType": "openSource",
     "exemptionText": ""
   },
-  "organization": "",
-  "repositoryURL": "https://github.com/DSACMS/share-it-act-website",
+  "organization": "Centers for Medicare & Medicaid Services",
+  "repositoryURL": "https://github.com/DSACMS/share-it-act-lp",
+  "repositoryHost": "github.com/DSACMS",
+  "repositoryVisibility": "public",
   "vcs": "git",
   "laborHours": 3199,
-  "platforms": [],
-  "categories": [],
-  "softwareType": "",
+  "reuseFrequency": {
+    "forks": 0
+  },
+  "platforms": [
+    "web"
+  ],
+  "categories": [
+    "it-development",
+    "it-documentation",
+    "compliance",
+    "government-services"
+  ],
+  "softwareType": "standalone/web",
   "languages": [
     "HTML",
     "CSS",
     "JavaScript"
   ],
-  "maintenance": "",
+  "maintenance": "internal",
+  "contractNumber": "",
   "date": {
     "created": "2025-04-08T14:25:37Z",
     "lastModified": "2025-04-09T21:23:45Z",
     "metaDataLastUpdated": "2025-04-09T21:24:50.219Z"
   },
-  "tags": [],
+  "tags": [
+    "share-it-act",
+    "open-source",
+    "federal-code-sharing",
+    "code-json",
+    "software-metadata",
+    "government"
+  ],
   "contact": {
-    "email": "",
-    "name": ""
+    "email": "opensource@cms.hhs.gov",
+    "name": "CMS Open Source Program Office"
   },
+  "feedbackMechanisms": [
+    "https://github.com/DSACMS/share-it-act-lp/issues"
+  ],
   "localisation": false,
-  "repositoryType": "",
+  "repositoryType": "website",
   "userInput": false,
-  "fismaLevel": "",
-  "group": "",
-  "subsetInHealthcare": [],
-  "userType": [],
-  "repositoryHost": "github",
+  "fismaLevel": "low",
+  "group": "CMS/OA/DSAC",
+  "project": [
+    "https://github.com/DSACMS/gov-codejson"
+  ],
+  "systems": [
+    ""
+  ],
+  "upstream": [
+    "USWDS"
+  ],
+  "subsetInHealthcare": [
+    "operational"
+  ],
+  "userType": [
+    "government"
+  ],
   "maturityModelTier": 0
 }
