@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHARE IT Act | Centers for Medicare & Medicaid Services</title>
+    <meta name="description" content="Official guide to the Source Code Harmonization And Reuse in Information Technology (SHARE IT) Act - helping federal agencies comply with software code sharing requirements.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/main.js" defer></script>
+    
+    <!-- Add USWDS assets for federal banner and USA identifier -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/css/uswds.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/js/uswds.min.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- USA Banner -->
+    <section class="usa-banner" aria-label="Official government website">
+        <div class="usa-accordion">
+            <header class="usa-banner__header">
+                <div class="usa-banner__inner">
+                    <div class="grid-col-auto">
+                        <img class="usa-banner__header-flag" src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/img/us_flag_small.png" alt="U.S. flag">
+                    </div>
+                    <div class="grid-col-fill tablet:grid-col-auto">
+                        <p class="usa-banner__header-text">An official website of the United States government</p>
+                        <p class="usa-banner__header-action" aria-hidden="true">Here's how you know</p>
+                    </div>
+                    <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+                        <span class="usa-banner__button-text">Here's how you know</span>
+                    </button>
+                </div>
+            </header>
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner">
+                <div class="grid-row grid-gap-lg">
+                    <div class="usa-banner__guidance tablet:grid-col-6">
+                        <img class="usa-banner__icon usa-media-block__img" src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/img/icon-dot-gov.svg" alt="Dot gov">
+                        <div class="usa-media-block__body">
+                            <p>
+                                <strong>Official websites use .gov</strong>
+                                <br>
+                                A <strong>.gov</strong> website belongs to an official government organization in the United States.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="usa-banner__guidance tablet:grid-col-6">
+                        <img class="usa-banner__icon usa-media-block__img" src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/img/icon-https.svg" alt="Https">
+                        <div class="usa-media-block__body">
+                            <p>
+                                <strong>Secure .gov websites use HTTPS</strong>
+                                <br>
+                                A <strong>lock</strong> ( <span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title banner-lock-description"><title id="banner-lock-title">Lock</title><desc id="banner-lock-description">A locked padlock</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg></span> ) or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CMS Header -->
+    <header role="banner" class="cms-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="project-logo" aria-label="SHARE-IT Home">
+                    <img src="assets/images/dsacms.svg" alt="DSACMS Logo" />
+                    SHARE IT Act
+                </a>
+                <nav role="navigation" aria-label="Main navigation">
+                    <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul id="main-menu">
+                        <li><a href="#" aria-current="page">Home</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="https://github.com/DSACMS/gov-codejson" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Handling Software Projects within Government</h1>
+                <p>Streamlining compliance with the SHARE IT Act, ensuring accurate and automated collection of software project metadata.</p>
+                <div class="cta-buttons">
+                    <a href="#documentation" class="btn">Get Started</a>
+                    <a href="https://github.com/DSACMS/gov-codejson" class="btn btn-outline">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explain Section -->
+        <section class="features" aria-labelledby="features-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="features-heading">What is the SHARE IT Act?</h2>
+                    <p>The Source Code Harmonization And Reuse in Information Technology Act (SHARE IT Act) requires federal agencies to share custom-developed software code, including metadata about the project, with each other to eliminate duplicative government work. This website provides comprehensive documentation that goes more in depth into the SHARE IT Act and provides tooling and guidance to help users become compliant.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🏛️</div>
+                        <div class="feature-content">
+                            <h3>Federal Compliance</h3>
+                            <p>Meets requirements of M-16-21 and the SHARE IT Act for code sharing across agencies.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔄</div>
+                        <div class="feature-content">
+                            <h3>code.json</h3>
+                            <p>Metadata schema that ensures consistent data collection across all software projects.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🧰</div>
+                        <div class="feature-content">
+                            <h3>Automated Tools</h3>
+                            <p>Suite of tools for generating, validating, and maintaining your projects code.json file.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation Section -->
+        <section class="documentation" id="documentation" aria-labelledby="documentation-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="documentation-heading">Documentation</h2>
+                    <p>Comprehensive guides and references for all things SHARE IT Act related.</p>
+                </div>
+
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <h3>Common Questions</h3>
+                        <p>Common questions about the SHARE IT Act, code.json, and federal open source projects.</p>
+                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/faq.md" class="doc-link">View FAQ <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Schemas</h3>
+                        <p>Complete reference of all metadata fields, their descriptions, and requirements for code.json.</p>
+                        <a href=https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md class="doc-link">View Documentation <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Implementation Guide</h3>
+                        <p>Step-by-step procedures for creating, updating, and maintaining code.json files in your repositories.</p>
+                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/procedures.md" class="doc-link">View Guide <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Examples</h3>
+                        <p>Real world examples of compliant code.json files that live in federal open source repositories.</p>
+                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/code.json" class="doc-link">View Examples <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="tools" id="tools" aria-labelledby="tools-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="tools-heading">Tools</h2>
+                    <p>Utilities and applications to help you generate, validate, and manage your repositories and become SHARE IT Act compliant.</p>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <img src="assets/images/form-generator.png" alt="Code.json Generator Form interface" />
+                            <div class="badge" aria-label="Category">Webform</div>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Web Form Generator</h3>
+                            <p>Interactive web form that guides you through creating a valid code.json file step by step. Fill out the form fields, and download your generated file.</p>
+                            <div class="tool-tags" aria-label="Features">
+                                <span class="tool-tag">Interactive</span>
+                                <span class="tool-tag">Browser</span>
+                            </div>
+                            <a href="https://dsacms.github.io/codejson-generator" class="btn">Open Tool</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <img src="assets/images/index-generator.png" alt="Code.json Index Generator interface" />
+                            <div class="badge" aria-label="Category">CLI</div>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Index Generator</h3>
+                            <p>Python-based CLI tool that scans GitHub organizations for repositories with code.json files and combines them into a single indexed file for agency-wide reporting.</p>
+                            <div class="tool-tags" aria-label="Features">
+                                <span class="tool-tag">Python</span>
+                                <span class="tool-tag">Aggregation</span>
+                            </div>
+                            <a href="https://github.com/DSACMS/codejson-index-generator" class="btn">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <img src="assets/images/auto-generator.png" alt="Automated Generator interface" />
+                            <div class="badge" aria-label="Category">GitHub Action</div>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Automated Generator</h3>
+                            <p>GitHub Action that automatically generates and updates code.json files in your repositories. It computes labor hours, detects languages, and maintains accurate metadata.</p>
+                            <div class="tool-tags" aria-label="Features">
+                                <span class="tool-tag">Automation</span>
+                                <span class="tool-tag">CI/CD</span>
+                            </div>
+                            <a href="https://github.com/DSACMS/automated-codejson-generator" class="btn">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <img src="assets/images/repo-scaffolder.png" alt="Repository Scaffolder interface" />
+                            <div class="badge" aria-label="Category">CLI</div>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Repository Scaffolder</h3>
+                            <p>Template generator for creating new repositories with all the necessary documentation and code.json files pre-configured according to standards.</p>
+                            <div class="tool-tags" aria-label="Features">
+                                <span class="tool-tag">Cookiecutter</span>
+                                <span class="tool-tag">Templates</span>
+                            </div>
+                            <a href="https://github.com/DSACMS/repo-scaffolder" class="btn">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <img src="assets/images/metrics.png" alt="Metrics interface" />
+                            <div class="badge" aria-label="Category">Website</div>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Metrics</h3>
+                            <p>Website that allows users to view certain statistics and data visualizations about their open source project. Can be viewed at a repository or organization level.</p>
+                            <div class="tool-tags" aria-label="Features">
+                                <span class="tool-tag">Browser</span>
+                                <span class="tool-tag">Data Visualizations</span>
+                            </div>
+                            <a href="https://dsacms.github.io/metrics/" class="btn">Open Tool</a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <img src="assets/images/repolinter.svg" alt="Repolinter interface" />
+                            <div class="badge" aria-label="Category">Github Action</div>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Repolinter Actions</h3>
+                            <p>A Github Action that provides certain prepopulated documentation to your repository based on which Maturity Model tier you are in.</p>
+                            <div class="tool-tags" aria-label="Features">
+                                <span class="tool-tag">Automation</span>
+                                <span class="tool-tag">CI/CD</span>
+                            </div>
+                            <a href="https://github.com/DSACMS/repolinter-actions" class="btn">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" aria-labelledby="cta-heading">
+            <div class="container">
+                <h2 id="cta-heading">Ready to be Compliant?</h2>
+                <p>By taking our short quiz, we can help guide you through the process.</p>
+                <a href="#documentation" class="btn">Get Started</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- CMS Footer -->
+    <footer class="usa-footer site-footer" role="contentinfo">
+      <div class="footer-section-bottom bg-base-darker">
+        <div class="grid-container">
+          <div class="grid-row">
+            <div class="footer-simple-content">
+              <p class="footer-text">This site is maintained by <a href="https://www.cms.gov/digital-service/open-source-program-office" class="footer-link">the CMS Open Source Program Office</a>.</p>
+              <p class="footer-text">Read our <a href="https://github.com/DSACMS/ospo-guide/blob/main/LINKING_POLICY.md" class="footer-link">linking policy</a>.</p>
+              <p class="footer-text">Have questions or want to contact us? Email us at <a href="mailto:opensource@cms.hhs.gov" class="footer-link">opensource@cms.hhs.gov</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="usa-identifier">
+      <section
+        class="usa-identifier__section usa-identifier__section--masthead"
+        aria-label="Agency identifier"
+      >
+        <div class="usa-identifier__container">
+          <div class="cms-identifier">
+            <div class="cms-logos">
+              <a href="https://hhs.gov" class="cms-logo-link">
+                <img src="assets/images/hhs-white.svg" class="cms-logo-img" alt="HHS logo">
+              </a>
+              <a href="https://cms.gov" class="cms-logo-link">
+                <img src="assets/images/cms-white.svg" class="cms-logo-img" alt="CMS logo">
+              </a>
+            </div>
+            <div class="cms-identity">
+              <p class="cms-domain">cms.gov</p>
+              <p class="cms-disclaimer">
+                An official website of the <a href="https://hhs.gov">Department of Health and Human Services</a> and the
+                <a href="https://cms.gov">Centers for Medicare and Medicaid Services</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav
+        class="usa-identifier__section usa-identifier__section--required-links"
+        aria-label="Important links,,,"
+      >
+        <div class="usa-identifier__container">
+          <div class="footer-links-wrapper">
+            <div class="footer-links-group">
+              <a href="https://www.cms.gov/about-cms/about-cms" class="usa-identifier__required-link usa-link">About CMS</a>
+              <a href="https://www.cms.gov/about-cms/agency-information/aboutwebsite/cmsnondiscriminationnotice" class="usa-identifier__required-link usa-link">Accessibility statement</a>
+            </div>
+            
+            <div class="footer-links-group">
+              <a href="https://www.cms.gov/freedom-information-act-foia-service-center" class="usa-identifier__required-link usa-link">FOIA requests</a>
+              <a href="https://www.cms.gov/about-cms/agency-information/aboutwebsite/nofearact" class="usa-identifier__required-link usa-link">No FEAR Act data</a>
+            </div>
+            
+            <div class="footer-links-group">
+              <a href="https://www.oig.hhs.gov/" class="usa-identifier__required-link usa-link">Office of the Inspector General</a>
+              <a href="https://www.cms.gov/About-CMS/Agency-Information/PerformanceBudget" class="usa-identifier__required-link usa-link">Performance reports</a>
+            </div>
+            
+            <div class="footer-links-group">
+              <a href="https://www.cms.gov/privacy" class="usa-identifier__required-link usa-link">Privacy policy</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section
+        class="usa-identifier__section usa-identifier__section--usagov"
+        aria-label="U.S. government information and services"
+      >
+        <div class="usa-identifier__container">
+          <div class="usagov-container">
+            <div class="usagov-text">Looking for U.S. government information and services?</div>
+            <a href="https://www.usa.gov/" class="usagov-link">Visit USA.gov</a>
+          </div>
+        </div>
+      </section>
+    </div>
+</body>
+</html>
