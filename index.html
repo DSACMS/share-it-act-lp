@@ -91,8 +91,8 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Handling Software Projects within Government</h1>
-                <p>Streamlining compliance with the SHARE IT Act, ensuring accurate and automated collection of software project metadata.</p>
+                <h1>Enabling Reuse of Federal Source Code</h1>
+                <p>Streamlining compliance and reducing burden of software repository metadata through automation, open standards, and open source.</p>
                 <div class="cta-buttons">
                     <a href="#documentation" class="btn">Get Started</a>
                     <a href="https://github.com/DSACMS/gov-codejson" class="btn btn-outline">View on GitHub</a>
@@ -105,7 +105,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2 id="features-heading">What is the SHARE IT Act?</h2>
-                    <p>The Source Code Harmonization And Reuse in Information Technology Act (SHARE IT Act) requires federal agencies to share custom-developed software code, including metadata about the project, with each other to eliminate duplicative government work. This website provides comprehensive documentation that goes more in depth into the SHARE IT Act and provides tooling and guidance to help users become compliant.</p>
+                    <p>The Source Code Harmonization And Reuse in Information Technology Act (SHARE IT Act) requires federal agencies to publicly share repositories of custom-developed source code to eliminate duplicative work and promote re-use. This website provides documentation on tooling and guidance to help users become SHARE IT Act ready.</p>
                 </div>
 
                 <div class="features-grid">
@@ -139,29 +139,29 @@
             <div class="container">
                 <div class="section-title">
                     <h2 id="documentation-heading">Documentation</h2>
-                    <p>Comprehensive guides and references for all things SHARE IT Act related.</p>
+                    <p>Guides and references for all things SHARE IT Act.</p>
                 </div>
 
                 <div class="doc-grid">
                     <div class="doc-card">
                         <h3>Common Questions</h3>
                         <p>Common questions about the SHARE IT Act, code.json, and federal open source projects.</p>
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/faq.md" class="doc-link">View FAQ <span aria-hidden="true">→</span></a>
+                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/faq.md" target="_blank" class="doc-link">View FAQ <span aria-hidden="true">→</span></a>
                     </div>
                     <div class="doc-card">
                         <h3>Schemas</h3>
                         <p>Complete reference of all metadata fields, their descriptions, and requirements for code.json.</p>
-                        <a href=https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md class="doc-link">View Documentation <span aria-hidden="true">→</span></a>
+                        <a href=https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md target="_blank" class="doc-link">View Documentation <span aria-hidden="true">→</span></a>
                     </div>
                     <div class="doc-card">
                         <h3>Implementation Guide</h3>
                         <p>Step-by-step procedures for creating, updating, and maintaining code.json files in your repositories.</p>
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/procedures.md" class="doc-link">View Guide <span aria-hidden="true">→</span></a>
+                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/procedures.md" target="_blank" class="doc-link">View Guide <span aria-hidden="true">→</span></a>
                     </div>
                     <div class="doc-card">
-                        <h3>Examples</h3>
-                        <p>Real world examples of compliant code.json files that live in federal open source repositories.</p>
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/code.json" class="doc-link">View Examples <span aria-hidden="true">→</span></a>
+                        <h3>Example Metadata</h3>
+                        <p>Real world example of compliant code.json file in a federal repository.</p>
+                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/code.json" target="_blank" class="doc-link">View Examples <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2 id="tools-heading">Tools</h2>
-                    <p>Utilities and applications to help you generate, validate, and manage your repositories and become SHARE IT Act compliant.</p>
+                    <p>Utilities and tools to help generate, validate, and manage, and visualize repository metadata.</p>
                 </div>
 
                 <div class="tools-grid">
@@ -183,7 +183,7 @@
                         </div>
                         <div class="tool-content">
                             <h3>Web Form Generator</h3>
-                            <p>Interactive web form that guides you through creating a valid code.json file step by step. Fill out the form fields, and download your generated file.</p>
+                            <p>A step-by-step interactive web form for creating, generating, and downloading a valid code.json file.</p>
                             <div class="tool-tags" aria-label="Features">
                                 <span class="tool-tag">Interactive</span>
                                 <span class="tool-tag">Browser</span>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="tool-content">
                             <h3>Index Generator</h3>
-                            <p>Python-based CLI tool that scans GitHub organizations for repositories with code.json files and combines them into a single indexed file for agency-wide reporting.</p>
+                            <p>Python-based CLI tool that scans GitHub repositories for code.json files, and generates an index file for agency-wide reporting.</p>
                             <div class="tool-tags" aria-label="Features">
                                 <span class="tool-tag">Python</span>
                                 <span class="tool-tag">Aggregation</span>
@@ -215,7 +215,7 @@
                         </div>
                         <div class="tool-content">
                             <h3>Automated Generator</h3>
-                            <p>GitHub Action that automatically generates and updates code.json files in your repositories. It computes labor hours, detects languages, and maintains accurate metadata.</p>
+                            <p>GitHub Action that automatically generates and updates code.json files. It can computes labor hours, detect languages, and maintain accurate metadata.</p>
                             <div class="tool-tags" aria-label="Features">
                                 <span class="tool-tag">Automation</span>
                                 <span class="tool-tag">CI/CD</span>
@@ -247,7 +247,7 @@
                         </div>
                         <div class="tool-content">
                             <h3>Metrics</h3>
-                            <p>Website that allows users to view certain statistics and data visualizations about their open source project. Can be viewed at a repository or organization level.</p>
+                            <p>Website to view statistics and data visualizations about open source projects at the repository or organization level.</p>
                             <div class="tool-tags" aria-label="Features">
                                 <span class="tool-tag">Browser</span>
                                 <span class="tool-tag">Data Visualizations</span>
@@ -263,7 +263,7 @@
                         </div>
                         <div class="tool-content">
                             <h3>Repolinter Actions</h3>
-                            <p>A Github Action that provides certain prepopulated documentation to your repository based on which Maturity Model tier you are in.</p>
+                            <p>A Github Action that pre-populates documentation based repository maturity.</p>
                             <div class="tool-tags" aria-label="Features">
                                 <span class="tool-tag">Automation</span>
                                 <span class="tool-tag">CI/CD</span>
@@ -280,7 +280,7 @@
             <div class="container">
                 <h2 id="cta-heading">Ready to be Compliant?</h2>
                 <p>By taking our short quiz, we can help guide you through the process.</p>
-                <a href="#documentation" class="btn">Get Started</a>
+                <a href="#documentation" class="btn">Coming Soon!</a>
             </div>
         </section>
     </main>
