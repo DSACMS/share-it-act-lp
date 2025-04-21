@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Federal banner opening functionality
-    const bannerButton = document.querySelector('.usa-banner__button');
-    const bannerContent = document.getElementById('gov-banner');
-    const cmsHeader = document.querySelector('.cms-header');
-    let bannerExpanded = false;
+    // // Federal banner opening functionality
+    // const bannerButton = document.querySelector('.usa-banner__button');
+    // const bannerContent = document.getElementById('gov-banner');
+    // const cmsHeader = document.querySelector('.cms-header');
+    // let bannerExpanded = false;
 
-    if (bannerButton && bannerContent) {
-        bannerContent.style.display = 'none';
+    // if (bannerButton && bannerContent) {
+    //     bannerContent.style.display = 'none';
 
-        bannerButton.addEventListener('click', function () {
-            bannerExpanded = !bannerExpanded;
-            this.setAttribute('aria-expanded', bannerExpanded);
+    //     bannerButton.addEventListener('click', function () {
+    //         bannerExpanded = !bannerExpanded;
+    //         this.setAttribute('aria-expanded', bannerExpanded);
 
-            // hacky but only way i got this to expand and close with the custom banner
-            if (bannerExpanded) {
-                bannerContent.style.display = 'block';
-                if (cmsHeader) {
-                    cmsHeader.style.top = bannerContent.offsetHeight + 24 + 'px';
-                }
-            } else {
-                bannerContent.style.display = 'none';
-                if (cmsHeader) {
-                    cmsHeader.style.top = '24px';
-                }
-            }
-        });
-    }
+    //         // hacky but only way i got this to expand and close with the custom banner
+    //         if (bannerExpanded) {
+    //             bannerContent.style.display = 'block';
+    //             if (cmsHeader) {
+    //                 cmsHeader.style.top = bannerContent.offsetHeight + 24 + 'px';
+    //             }
+    //         } else {
+    //             bannerContent.style.display = 'none';
+    //             if (cmsHeader) {
+    //                 cmsHeader.style.top = '24px';
+    //             }
+    //         }
+    //     });
+    // }
 
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');

@@ -192,7 +192,7 @@
     width: 100%;
     z-index: 100;
     border-bottom: 1px solid var(--gray);
-    top: 24px; 
+    /* top: 24px;  */
     transition: top 0.3s;
   }
   
@@ -333,6 +333,18 @@
     margin: 0 auto;
     font-size: 1.1rem;
   }
+
+  .section-title a {
+    font-size: 0.75rem;
+  }
+
+  #features-body {
+    text-align: left;
+  }
+
+  #features-heading {
+    text-align: center;
+  }
   
   /* Section: Features */
   .features {
@@ -352,6 +364,10 @@
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .feature-card a:link {
+    text-decoration: none;
   }
   
   .feature-card:hover {
