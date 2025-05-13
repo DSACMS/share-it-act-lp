@@ -184,13 +184,8 @@
   }
 
   .feedback-banner {
-    font-family: 'Public Sans', 'Segoe UI', sans-serif;
-    font-size: 1rem;
     background-color: var(--banner-bg);
     position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 101; 
 }
   
   /* CMS Header */
