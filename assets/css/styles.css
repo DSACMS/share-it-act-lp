@@ -186,6 +186,7 @@
   .feedback-banner {
     background-color: var(--banner-bg);
     position: fixed;
+    z-index: 9999;
 }
   
   /* CMS Header */
