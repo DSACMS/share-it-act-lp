@@ -325,6 +325,198 @@
             </div>
         </section>
 
+        <!-- SHARE IT Journey Section -->
+        <section class="journey" aria-labelledby="share-it-act-journey">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="journey-heading">SHARE IT Act Journey</h2>
+                    <p>Complete the following steps to bring your repository and agency into compliance with the SHARE
+                        IT Act</p>
+                </div>
+                <div class="compliance-process-section" id="repo-compliance">
+                    <div class="compliance-heading">
+                        <h3>For repositories managed by project teams: </h3>
+                    </div>
+                    <div class="journey-step" id="gather-info">
+                        <div class="step-header">
+                            <div class="doc-card-number">1</div>
+                            <h4>Identify key information about your repository
+                            </h4>
+                        </div>
+                        <div style="margin-left: 4em;">
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-exempted" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-exempted">
+                                    Is my project exempted from the SHARE IT Act?
+                                </label>
+                            </div>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-ownership" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-ownership">
+                                    Is the project owned by the agency?
+                                </label>
+                            </div>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-maintenance" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-maintenance">
+                                    Identify whether the project is being actively maintained or not
+                                </label>
+                            </div>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-contract-numbers" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-contract-numbers">
+                                    Identify any contract numbers under which the project was developed
+                                </label>
+                            </div>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-repo-visibility" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-repo-visibility">
+                                    Is my project repository public or private?
+                                </label>
+                            </div>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-urls" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-urls">
+                                    What is the URLs for my project?
+                                </label>
+                            </div>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-feedback" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-feedback">
+                                    Identify any feedback mechanisms for the project
+                                </label>
+                            </div>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-freq-reuse" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-freq-reuse">
+                                    Calculate or estimate project's frequency of reuse
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step" id="add-code-json">
+                        <div class="step-header">
+                            <div class="doc-card-number">2</div>
+                            <h4>Add a <code>code.json</code> file to your repository to provide required project
+                                metadata </h4>
+                            <br>
+                        </div>
+                        <div style="margin-left: 4em;">
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="codejson-generator-formsite" type="checkbox">
+                                <label class="usa-checkbox__label" for="codejson-generator-formsite">
+                                    Use
+                                    <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#Using-repo-scaffolder"
+                                        target="_blank" rel="noopener noreferrer">
+                                        codejson-generator</a>
+                                </label>
+                            </div>
+                            <p style="margin-top: 0.75rem;">OR</p>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="automated-codejson-generator" type="checkbox">
+                                <label class="usa-checkbox__label" for="automated-codejson-generator">
+                                    Use
+                                    <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#update-an-existing-repository-using-repo-scaffolder"
+                                        target="_blank" rel="noopener noreferrer">
+                                        automated-codejson-generator</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step" id="going-forward">
+                        <div class="step-header">
+                            <div class="doc-card-number">3</div>
+                            <h4>Going forward</h4>
+                        </div>
+                        <div class="journey-substeps" style="margin-left: 4em;">
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="automated-maintenance" type="checkbox">
+                                <label class="usa-checkbox__label" for="automated-maintenance">
+                                    Add
+                                    <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#update-an-existing-repository-using-repo-scaffolder"
+                                        target="_blank" rel="noopener noreferrer">
+                                        automated-codejson-generator</a> to CI/CD for regular metadata updates
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="compliance-process-section" id="agency-compliance">
+                    <div class="compliance-heading">
+                        <h3>For agencies: </h3>
+                    </div>
+                    <div class="journey-step" id="identify-orgs">
+                        <div class="step-header">
+                            <div class="doc-card-number">1</div>
+                            <h4>Identify your GitHub organizations and other platforms source code is hosted</h4>
+                        </div>
+                        <div class="journey-substeps" style="margin-left: 4em;">
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="check-risks" type="checkbox">
+                                <label class="usa-checkbox__label" for="check-risks">
+                                    Add
+                                    <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#update-an-existing-repository-using-repo-scaffolder"
+                                        target="_blank" rel="noopener noreferrer">
+                                        automated-codejson-generator</a> to CI/CD for regular metadata updates
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step" id="run-index-gen">
+                        <div class="step-header">
+                            <div class="doc-card-number">2</div>
+                            <h4>Generate the agency-index.json using index-generator</h4>
+                        </div>
+                        <div class="journey-substeps" style="margin-left: 4em;">
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="index-gen-website" type="checkbox">
+                                <label class="usa-checkbox__label" for="index-gen-website">
+                                    Use the
+                                    <a href="https://dsacms.github.io/index-generator-website/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        index-generator-website</a>
+
+                                </label>
+                            </div>
+                            <p style="margin-top: 0.75rem;">OR</p>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="index-gen-website" type="checkbox">
+                                <label class="usa-checkbox__label" for="index-gen-website">
+                                    Use the
+                                    <a href="https://github.com/DSACMS/codejson-index-generator" target="_blank"
+                                        rel="noopener noreferrer">
+                                        index-generator python tool</a>
+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-step" id="hosting-index">
+                        <div class="step-header">
+                            <div class="doc-card-number">3</div>
+                            <h4>Provide the index json file at: </h4>
+                        </div>
+                        <div style="margin-left: 4em;">
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="agency-tld" type="checkbox">
+                                <label class="usa-checkbox__label" for="agency-tld">
+                                    Agency's top level domain (TLD)
+                                </label>
+                            </div>
+                            <p style="margin-top: 0.75rem;">OR</p>
+                            <div class="usa-checkbox">
+                                <input class="usa-checkbox__input" id="github-repo" type="checkbox">
+                                <label class="usa-checkbox__label" for="github-repo">
+                                    a GitHub repository
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta" id="cta" aria-labelledby="cta-heading">
             <div class="container">
