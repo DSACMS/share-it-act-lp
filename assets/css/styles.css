@@ -462,22 +462,10 @@ nav ul li a[aria-current="page"] {
   margin-left: 6px;
 }
 
-/* Section: Tools */
-.tools {
-  padding: 80px 0;
-  background-color: var(--white);
-}
-
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
 /* Section: SHARE IT Journey */
 .journey {
   padding: 80px 0;
-  background-color: var(--cms-light-blue);
+  background-color: var(--white);
 }
 
 .journey .section-title {
@@ -492,6 +480,20 @@ nav ul li a[aria-current="page"] {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+.compliance-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.compliance-section>div:first-child {
+  border-right: 1px dotted black;
+}
+
+.compliance-process-section {
+  padding: 0px 20px;
 }
 
 .compliance-process-section .compliance-heading {
@@ -513,9 +515,18 @@ nav ul li a[aria-current="page"] {
   font-size: 14px;
 }
 
-.usa-checkbox__label {
+/* Section: Tools */
+.tools {
+  padding: 80px 0;
   background-color: var(--cms-light-blue);
 }
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
 
 /* Card styles (shared between tools and features) */
 .tool-card,
