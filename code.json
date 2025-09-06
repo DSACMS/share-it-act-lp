@@ -1,6 +1,6 @@
 {
   "name": "share-it-act-lp",
-  "description": "Guide to the SHARE IT Act helping federal agencies comply with software code sharing requirements.",
+  "description": "Guide to the SHARE IT Act helping federal agencies comply with software code sharing requirements",
   "longDescription": "The Source Code Harmonization And Reuse in Information Technology Act (SHARE IT Act) requires federal agencies to share custom-developed software code, including metadata about the project, with each other to eliminate duplicative government work. This website provides comprehensive documentation that goes more in depth into the SHARE IT Act and provides tooling and guidance to help users become compliant.",
   "status": "Production",
   "permissions": {
@@ -15,10 +15,11 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/share-it-act-lp",
+  "projectURL": "",
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
   "vcs": "git",
-  "laborHours": 3199,
+  "laborHours": 3546,
   "reuseFrequency": {
     "forks": 0
   },
@@ -34,15 +35,15 @@
   "softwareType": "standalone/web",
   "languages": [
     "HTML",
-    "CSS",
-    "JavaScript"
+    "JavaScript",
+    "CSS"
   ],
   "maintenance": "internal",
   "contractNumber": "",
   "date": {
     "created": "2025-04-08T14:25:37Z",
-    "lastModified": "2025-04-09T21:23:45Z",
-    "metaDataLastUpdated": "2025-04-09T21:24:50.219Z"
+    "lastModified": "2025-05-13T16:17:15Z",
+    "metaDataLastUpdated": "2025-06-24T18:25:19.793Z"
   },
   "tags": [
     "share-it-act",
@@ -64,9 +65,7 @@
   "userInput": false,
   "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
-  "project": [
-    "https://github.com/DSACMS/gov-codejson"
-  ],
+  "projects": [],
   "systems": [
     ""
   ],
@@ -79,5 +78,8 @@
   "userType": [
     "government"
   ],
-  "maturityModelTier": 0
+  "maturityModelTier": 0,
+  "project": [
+    "https://github.com/DSACMS/gov-codejson"
+  ]
 }
