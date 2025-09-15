@@ -412,6 +412,7 @@ nav ul li a[aria-current="page"] {
 .documentation {
   padding: 80px 0;
   background-color: var(--cms-light-blue);
+  scroll-margin-top: 100px;
 }
 
 .doc-grid {
@@ -437,6 +438,7 @@ nav ul li a[aria-current="page"] {
   font-size: 1.3rem;
   margin-bottom: 12px;
   color: var(--cms-blue);
+  scroll-margin-top: 200px;
 }
 
 .doc-card p {
@@ -466,6 +468,7 @@ nav ul li a[aria-current="page"] {
 .journey {
   padding: 80px 0;
   background-color: var(--white);
+  scroll-margin-top: 100px;
 }
 
 .journey .section-title {
@@ -520,6 +523,7 @@ nav ul li a[aria-current="page"] {
 .tools {
   padding: 80px 0;
   background-color: var(--cms-light-blue);
+  scroll-margin-top: 100px;
 }
 
 .tools-grid {
@@ -587,6 +591,7 @@ nav ul li a[aria-current="page"] {
   font-size: 1.5rem;
   margin-bottom: 12px;
   color: var(--cms-blue);
+  scroll-margin-top: 200px;
 }
 
 .tool-content p {
@@ -619,6 +624,7 @@ nav ul li a[aria-current="page"] {
   padding: 80px 0;
   text-align: center;
   margin-bottom: 0;
+  scroll-margin-top: 100px;
 }
 
 .cta h2 {
