@@ -1,72 +1,37 @@
 ---
 permalink: /
-layout: layouts/wide
+layout: layouts/default
 title: Home
 tags: codegov
 eleventyNavigation:
   parent: codegov
   key: codegov-home
   order: 1
-  title: About this guide
-description: Sharing America's Code
+  title: Home
 eleventyExcludeFromCollections: true
 ---
 
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/main.js" defer></script>
-</head> -->
-
-<!-- CMS Header
-    <header role="banner" class="cms-header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="project-logo" aria-label="SHARE-IT Home">
-                    <img src="assets/images/dsacms.svg" alt="DSACMS Logo" />
-                    SHARE IT Act
-                </a>
-                <nav role="navigation" aria-label="Main navigation">
-                    <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu"
-                        aria-label="Toggle menu">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <ul id="main-menu">
-                        <li><a href="#hero" aria-current="page">Home</a></li>
-                        <li><a href="#documentation">Documentation</a></li>
-                        <li><a href="#journey">Journey</a></li>
-                        <li><a href="#tools">Tools</a></li>
-                        <li><a href="#cta">Quiz</a></li>
-                        <li><a href="https://github.com/DSACMS/share-it-act-lp" target="_blank"
-                                rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header> -->
-
 <!-- Hero Section -->
-<section class="hero" id="hero">
-    <div class="container">
-        <h1>Enabling Reuse of Federal Source Code</h1>
-        <p>Streamlining compliance and reducing burden of creating and maintaining software repository metadata
-            through automation, open standards, and open source.</p>
-        <div class="cta-buttons">
+<div class="usa-section intro-header">
+    <div class="grid-container">
+        <h1 class="visually-hidden">{{ title }}</h1>
+        <div class="usa-intro usa-intro--sections no-print">
+            <p>Enabling Reuse of Federal Source Code</p>
+            <p class="subtitle">
+                Streamlining compliance and reducing burden of creating and maintaining software repository metadata
+                through automation, open standards, and open source.
+            </p>
+            <div class="cta-buttons">
             <a href="#documentation" class="btn">Get Started</a>
             <a href="https://github.com/DSACMS/share-it-act-lp" target="_blank" class="btn btn-outline">View on
                 GitHub</a>
         </div>
+        </div>
     </div>
-</section>
+</div>
 
-<!-- Explain Section -->
 <section class="features" aria-labelledby="features-heading">
-    <div class="container">
+    <div class="grid-container">
         <div class="section-title">
             <h2 id="features-heading">What is the SHARE IT Act?</h2>
 
@@ -592,5 +557,3 @@ eleventyExcludeFromCollections: true
         </div>
     </div>
 </section>
-
-</html>
