@@ -1,6 +1,6 @@
 ---
 permalink: /
-layout: layouts/default
+layout: layouts/wide
 title: Home
 tags: codegov
 eleventyNavigation:
@@ -507,340 +507,56 @@ eleventyExcludeFromCollections: true
                     {% image_with_class "assets/home/img/repolinter.svg" "repolinter-img" "Repolinter" %}
                     <div class="badge" aria-label="Category">Github Action</div>
                 </div>
-                <div class="compliance-section">
-                    <div class="compliance-process-section" id="repo-compliance">
-                        <div class="compliance-heading">
-                            <h3 id="repo-teams">For repositories managed by project teams: </h3>
-                        </div>
-                        <div class="journey-step" id="gather-info">
-                            <div class="step-header">
-                                <div class="doc-card-number">1</div>
-                                <h4>Identify key information about your repository
-                                </h4>
-                            </div>
-                            <div style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-ownership" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-ownership">
-                                        Is the project owned by the agency?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-maintenance" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-maintenance">
-                                        Is the project actively maintained or not?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-contract-numbers" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-contract-numbers">
-                                        Under which contract numbers was the project developed?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-repo-visibility" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-repo-visibility">
-                                        Is the project repository public or private?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-urls" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-urls">
-                                        What are the URLs for the project?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-feedback" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-feedback">
-                                        What feedback mechanisms are in place for the project? (e.g. GitHub Issues)
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-freq-reuse" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-freq-reuse">
-                                        What is the estimated frequency of the project's reuse? (e.g.
-                                        forks, clones, downloads)
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-exempted" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-exempted">
-                                        Is my project exempted from the SHARE IT Act?
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step" id="add-code-json">
-                            <div class="step-header">
-                                <div class="doc-card-number">2</div>
-                                <h4>Add a <code>code.json</code> file to your repository to provide required project
-                                    metadata </h4>
-                                <br>
-                            </div>
-                            <div style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="codejson-generator-formsite" type="checkbox">
-                                    <label class="usa-checkbox__label" for="codejson-generator-formsite">
-                                        Use
-                                        <a href="https://dsacms.github.io/codejson-generator/" target="_blank"
-                                            rel="noopener noreferrer">
-                                            codejson-generator</a> website
-                                    </label>
-                                </div>
-                                <p style="margin-top: 0.75rem;">OR</p>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="automated-codejson-generator"
-                                        type="checkbox">
-                                    <label class="usa-checkbox__label" for="automated-codejson-generator">
-                                        Use
-                                        <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
-                                            rel="noopener noreferrer">
-                                            automated-codejson-generator</a> GitHub action
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step" id="going-forward">
-                            <div class="step-header">
-                                <div class="doc-card-number">3</div>
-                                <h4>Automate code.json updates for the future</h4>
-                            </div>
-                            <div class="journey-substeps" style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="automated-maintenance" type="checkbox">
-                                    <label class="usa-checkbox__label" for="automated-maintenance">
-                                        Add
-                                        <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
-                                            rel="noopener noreferrer">
-                                            automated-codejson-generator</a> to CI/CD for regular metadata updates
-
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                <div class="tool-content">
+                    <h3 id="repolinter-actions">Repolinter Actions</h3>
+                    <p>A Github Action that pre-populates documentation based repository maturity.</p>
+                    <div class="tool-tags" aria-label="Features">
+                        <span class="tool-tag">Automation</span>
+                        <span class="tool-tag">CI/CD</span>
                     </div>
-                    <div class="compliance-process-section" id="agency-compliance">
-                        <div class="compliance-heading">
-                            <h3 id="for-agencies">For agencies: </h3>
-                        </div>
-                        <div class="journey-step" id="identify-orgs">
-                            <div class="step-header">
-                                <div class="doc-card-number">1</div>
-                                <h4>Identify GitHub organizations and other platforms where source code is hosted</h4>
-                            </div>
-                        </div>
-                        <div class="journey-step" id="run-index-gen">
-                            <div class="step-header">
-                                <div class="doc-card-number">2</div>
-                                <h4>Generate the agency-index.json using index-generator</h4>
-                            </div>
-                            <div class="journey-substeps" style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="index-gen-website" type="checkbox">
-                                    <label class="usa-checkbox__label" for="index-gen-website">
-                                        Use the
-                                        <a href="https://dsacms.github.io/index-generator-website/" target="_blank"
-                                            rel="noopener noreferrer">
-                                            index-generator-website</a>
-
-                                    </label>
-                                </div>
-                                <p style="margin-top: 0.75rem;">OR</p>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="index-gen-tool" type="checkbox">
-                                    <label class="usa-checkbox__label" for="index-gen-tool">
-                                        Use the
-                                        <a href="https://github.com/DSACMS/codejson-index-generator" target="_blank"
-                                            rel="noopener noreferrer">
-                                            index-generator python tool</a>
-
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step" id="hosting-index">
-                            <div class="step-header">
-                                <div class="doc-card-number">3</div>
-                                <h4>Provide the index json file at: </h4>
-                            </div>
-                            <div style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="agency-tld" type="checkbox">
-                                    <label class="usa-checkbox__label" for="agency-tld">
-                                        Agency's top level domain (TLD)
-                                    </label>
-                                </div>
-                                <p style="margin-top: 0.75rem;">OR</p>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="github-repo" type="checkbox">
-                                    <label class="usa-checkbox__label" for="github-repo">
-                                        a GitHub repository
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="compliance-process-section" id="egov-congress-report">
-                    <div class="compliance-heading">
-                        <h3 id="for-congress">For report to Congress: </h3>
-                    </div>
-                    <div class="journey-step" id="identify-orgs">
-                        <div class="step-header">
-                            <div class="doc-card-number">1</div>
-                            <h4>
-                                <a href="https://dsacms.github.io/code-gov/" target="_blank" rel="noopener noreferrer">
-                                    code-gov</a> serves as an inventory of all source code metadata
-                                in the federal
-                                government
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="journey-step" id="run-index-gen">
-                        <div class="step-header">
-                            <div class="doc-card-number">2</div>
-                            <h4> Administrator of the Office of Electronic Government submits a report with a list
-                                of all exempted software including narrative justifications</h4>
-                        </div>
-                    </div>
-                    <div class="journey-step" id="hosting-index">
-                        <div class="step-header">
-                            <div class="doc-card-number">3</div>
-                            <h4>Comptroller General of the United States submits a report including an assessment of
-                                the implementation of the act </h4>
-                        </div>
-                    </div>
+                    <a href="https://github.com/DSACMS/repolinter-actions" target="_blank" class="btn">View on
+                        GitHub</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Tools Section -->
-        <section class="tools" id="tools" aria-labelledby="tools-heading">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="tools-heading">Tools</h2>
-                    <p>Utilities and tools to help generate, validate, and manage, and visualize repository metadata.
-                    </p>
-                </div>
+<!-- CTA Section -->
+<section class="cta" id="cta" aria-labelledby="cta-heading">
+    <div class="container">
+        <h2 id="cta-heading">Ready to be Compliant?</h2>
+        <p>By taking our short quiz, we can help guide you through the process.</p>
+        <a href="#" id="open-quiz-btn" class="btn">Take the Quiz</a>
+    </div>
+</section>
 
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/form-generator.svg" alt="Code.json Generator Form interface" />
-                            <div class="badge" aria-label="Category">Webform</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="web-form-generator">Web Form Generator</h3>
-                            <p>A step-by-step interactive web form for creating, generating, and downloading a valid
-                                code.json file.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Interactive</span>
-                                <span class="tool-tag">Browser</span>
-                            </div>
-                            <a href="https://dsacms.github.io/codejson-generator" target="_blank" class="btn">Open
-                                Tool</a>
-                        </div>
-                    </div>
+<!-- Quiz Section -->
+<section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
+            <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
+                Act:</p>
+        </div>
 
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/index-generator.svg" alt="Code.json Index Generator interface" />
-                            <div class="badge" aria-label="Category">CLI</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="index-generator">Index Generator</h3>
-                            <p>Python-based CLI tool that scans GitHub repositories for code.json files, and generates
-                                an index file for agency-wide reporting.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Python</span>
-                                <span class="tool-tag">Aggregation</span>
-                            </div>
-                            <a href="https://dsacms.github.io/index-generator-website/" target="_blank" class="btn">View
-                                on GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/auto-generator.svg" alt="Automated Generator interface" />
-                            <div class="badge" aria-label="Category">GitHub Action</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="automated-generator">Automated Generator</h3>
-                            <p>GitHub Action that automatically generates and updates code.json files. It can computes
-                                labor hours, detect languages, and maintain accurate metadata.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Automation</span>
-                                <span class="tool-tag">CI/CD</span>
-                            </div>
-                            <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
-                                class="btn">View on GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/repo-scaffolder.svg" alt="Repository Scaffolder interface" />
-                            <div class="badge" aria-label="Category">CLI</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="repository-scaffolder">Repository Scaffolder</h3>
-                            <p>Template generator for creating new repositories with all the necessary documentation and
-                                code.json files pre-configured according to standards.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Cookiecutter</span>
-                                <span class="tool-tag">Templates</span>
-                            </div>
-                            <a href="https://github.com/DSACMS/repo-scaffolder" target="_blank" class="btn">View on
-                                GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/metrics.svg" alt="Metrics interface" />
-                            <div class="badge" aria-label="Category">Website</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="metrics">Metrics</h3>
-                            <p>Website to view statistics and data visualizations about open source projects at the
-                                repository or organization level.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Browser</span>
-                                <span class="tool-tag">Data Visualizations</span>
-                            </div>
-                            <a href="https://dsacms.github.io/metrics/" target="_blank" class="btn">Open Tool</a>
-                        </div>
-                    </div>
-
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/repolinter.svg" alt="Repolinter interface" />
-                            <div class="badge" aria-label="Category">Github Action</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="repolinter-actions">Repolinter Actions</h3>
-                            <p>A Github Action that pre-populates documentation based repository maturity.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Automation</span>
-                                <span class="tool-tag">CI/CD</span>
-                            </div>
-                            <a href="https://github.com/DSACMS/repolinter-actions" target="_blank" class="btn">View on
-                                GitHub</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Quiz Container -->
+        <div class="quiz">
+            <div class="form-container">
+                <form class="usa-form">
+                    <!-- Form is dynamically created -->
+                </form>
             </div>
-        </section>
+        </div>
 
-        <!-- CTA Section -->
-        <section class="cta" id="cta" aria-labelledby="cta-heading">
-            <div class="container">
-                <h2 id="cta-heading">Ready to be Compliant?</h2>
-                <p>By taking our short quiz, we can help guide you through the process.</p>
-                <a href="#" id="open-quiz-btn" class="btn">Take the Quiz</a>
-            </div>
-        </section>
+        <div class="results" style="display: none;">
+            <p class="tier-result">Your readiness level is: </p>
+            <div id="compliance-details"></div>
+            <br>
+            <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
+        </div>
+    </div>
+</section>
 
         <!-- Quiz Section -->
         <section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
