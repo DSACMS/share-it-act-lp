@@ -2,7 +2,28 @@
 codegov:
   - name: Overview
     url: /
-  - name: Agencies
-    url: /agencies/
-  - name: Guidance
-    url: /guidance/
+  
+  - name: Schema
+    url: /schema/
+  
+  - name: Form
+    url: https://dsacms.github.io/codejson-generator/
+    children:
+      - name: General
+        url: https://dsacms.github.io/codejson-generator/
+      - name: CMS
+        url: https://dsacms.github.io/codejson-generator/cms/
+  
+  - name: Index Generator
+    url: https://dsacms.github.io/index-generator-website/
+  
+  - name: Inventory
+    url: https://dsacms.github.io/code-gov/
+
+  - name: About
+    url: /about/
+    children:
+      - name: F&Q
+        url: /FaQ/
+      - name: Glossary
+        url: /glossary/
