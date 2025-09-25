@@ -3,6 +3,10 @@
 styling for landing page only
 */
 
+.grid-container {
+  max-width: 80rem;
+}
+
 /* Layout utilities */
 .grid-row {
   display: flex;
@@ -63,94 +67,7 @@ button:focus-visible,
   outline-offset: 3px;
 }
 
-/* CMS Header */
-// .cms-header {
-//   background-color: var(--white);
-//   padding: 15px 0;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-//   position: fixed;
-//   width: 100%;
-//   z-index: 100;
-//   border-bottom: 1px solid var(--gray);
-//   /* top: 24px;  */
-//   transition: top 0.3s;
-// }
-
-// .header-content {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .cms-logo {
-//   margin-right: 2rem;
-// }
-
-// .cms-logo img {
-//   height: 50px;
-// }
-
-// .project-logo {
-//   color: var(--cms-blue);
-//   font-size: 36px;
-//   font-weight: 700;
-//   display: flex;
-//   align-items: center;
-//   text-decoration: none;
-//   margin-right: auto;
-// }
-
-// .project-logo img {
-//   height: 50px;
-//   margin-right: 10px;
-// }
-
-// /* Navigation */
-// nav ul {
-//   display: flex;
-//   list-style: none;
-// }
-
-// nav ul li {
-//   margin-left: 30px;
-// }
-
-// nav ul li a {
-//   color: var(--cms-blue);
-//   text-decoration: none;
-//   font-weight: 500;
-//   transition: color 0.3s;
-//   padding: 8px;
-// }
-
-// nav ul li a:hover {
-//   color: var(--cms-bright-blue);
-// }
-
-// nav ul li a[aria-current="page"] {
-//   color: var(--cms-bright-blue);
-//   border-bottom: 2px solid var(--cms-bright-blue);
-// }
-
-// /* Mobile Menu */
-// .menu-toggle {
-//   display: none;
-//   background: transparent;
-//   border: none;
-//   cursor: pointer;
-//   padding: 8px;
-// }
-
-// .icon-bar {
-//   display: block;
-//   width: 25px;
-//   height: 3px;
-//   margin: 5px auto;
-//   background-color: var(--cms-blue);
-// }
-
 /* Hero Section */
-
 .intro-header .grid-container {
   display: flex;
   flex-direction: column;
@@ -356,8 +273,9 @@ button:focus-visible,
 }
 
 /* Section: SHARE IT Journey */
+
 .journey {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: $white;
   scroll-margin-top: 100px;
 }
@@ -376,6 +294,11 @@ button:focus-visible,
   gap: 0.5em;
 }
 
+.step-header h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .compliance-section {
   display: flex;
   justify-content: center;
@@ -391,7 +314,6 @@ button:focus-visible,
 }
 
 .compliance-process-section .compliance-heading {
-  margin-bottom: 20px;
   color: $cms-blue;
 }
 
@@ -412,7 +334,7 @@ button:focus-visible,
 
 /* Section: Tools */
 .tools {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: $cms-light-blue;
   scroll-margin-top: 100px;
 }
@@ -629,6 +551,7 @@ button:focus-visible,
 
   /* Button adjustments */
   .cta-buttons {
+
     display: flex;
     flex-direction: column;
     align-items: center;
