@@ -13,4 +13,8 @@ sidenav: false
 sticky_sidenav: false
 ---
 
-Agency about
+### Agency about
+
+- **[Frequently Asked Questions (FAQs)](/about/FAQ/)** - Common questions and answers about our software policies and practices.
+- **[Glossary](/about/glossary/)** - Definitions for frequently used words and phrases.
+

@@ -24,6 +24,6 @@ codegov:
     url: /about/
     children:
       - name: FAQ
-        url: FAQ/
+        url: /about/FAQ/
       - name: Glossary
-        url: glossary/
+        url: /about/glossary/
