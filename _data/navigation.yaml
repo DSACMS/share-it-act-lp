@@ -23,7 +23,7 @@ codegov:
   - name: About
     url: /about/
     children:
-      - name: FaQ
-        url: /FaQ/
+      - name: FAQ
+        url: /FAQ/
       - name: Glossary
         url: /glossary/
