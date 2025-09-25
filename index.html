@@ -1,6 +1,6 @@
 ---
 permalink: /
-layout: layouts/default
+layout: layouts/wide
 title: Home
 tags: codegov
 eleventyNavigation:
@@ -12,36 +12,14 @@ description: Sharing America's Code
 eleventyExcludeFromCollections: true
 ---
 
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHARE IT Act | Centers for Medicare & Medicaid Services</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/dsacms.svg">
-    <meta name="description" content="Guide to the Source Code Harmonization And Reuse in Information Technology Act - 
-        SHARE IT Act - Helping federal agencies comply with software code sharing requirements.">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/main.js" defer></script>
+</head> -->
 
-    <!-- Add USWDS assets for federal banner and USA identifier -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/css/uswds.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/js/uswds.min.js" defer></script>
-</head>
-
-<body>
-    <!-- Feedback Banner -->
-    <div class="feedback-banner">
-        <div class="bg-primary-lighter text-ink text-center">
-            <div class="grid-container">
-                <p class="usa-banner__header-text">
-                    Work in progress. We welcome questions and suggestions —
-                    <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                        href="https://github.com/DSACMS/share-it-act-lp/issues/new">give us feedback.</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- CMS Header -->
+<!-- CMS Header
     <header role="banner" class="cms-header">
         <div class="container">
             <div class="header-content">
@@ -70,629 +48,549 @@ eleventyExcludeFromCollections: true
                 </nav>
             </div>
         </div>
-    </header>
+    </header> -->
 
-    <main id="main-content">
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="container">
+        <h1>Enabling Reuse of Federal Source Code</h1>
+        <p>Streamlining compliance and reducing burden of creating and maintaining software repository metadata
+            through automation, open standards, and open source.</p>
+        <div class="cta-buttons">
+            <a href="#documentation" class="btn">Get Started</a>
+            <a href="https://github.com/DSACMS/share-it-act-lp" target="_blank" class="btn btn-outline">View on
+                GitHub</a>
+        </div>
+    </div>
+</section>
 
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="container">
-                <h1>Enabling Reuse of Federal Source Code</h1>
-                <p>Streamlining compliance and reducing burden of creating and maintaining software repository metadata
-                    through automation, open standards, and open source.</p>
-                <div class="cta-buttons">
-                    <a href="#documentation" class="btn">Get Started</a>
-                    <a href="https://github.com/DSACMS/share-it-act-lp" target="_blank" class="btn btn-outline">View on
-                        GitHub</a>
-                </div>
-            </div>
-        </section>
+<!-- Explain Section -->
+<section class="features" aria-labelledby="features-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="features-heading">What is the SHARE IT Act?</h2>
 
-        <!-- Explain Section -->
-        <section class="features" aria-labelledby="features-heading">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="features-heading">What is the SHARE IT Act?</h2>
+            <p id="features-body"> <em>"This bill requires federal agencies to ensure that custom-developed code
+                    (i.e., <a href="https://dsacms.github.io/ospo-guide/resources/glossary/#source-code" target="_blank"
+                        rel="noopener noreferrer" class="usa-tooltip" data-position="top"
+                        title="Source code: A higher level representation of computer commands as they are written by people and, therefore, must be assembled or compiled before a computer can execute the code as a program."
+                        style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">source
+                        code</a> that
+                    is produced under an agency contract, funded exclusively by the federal government, or
+                    developed
+                    by federal employees as part of their official duties) and certain technical components of
+                    the
 
-                    <p id="features-body"> <em>"This bill requires federal agencies to ensure that custom-developed code
-                            (i.e., <a href="https://dsacms.github.io/ospo-guide/resources/glossary/#source-code" target="_blank" rel="noopener noreferrer" 
-                            class="usa-tooltip" 
-                            data-position="top"
-                            title="Source code: A higher level representation of computer commands as they are written by people and, therefore, must be assembled or compiled before a computer can execute the code as a program."
-                            style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">source code</a> that
-                            is produced under an agency contract, funded exclusively by the federal government, or developed
-                            by federal employees as part of their official duties) and certain technical components of
-                            the
-
-                            code such as architecture designs and <a href="https://dsacms.github.io/ospo-guide/resources/glossary/#metadata" target="_blank" rel="noopener noreferrer" 
-                            class="usa-tooltip" data-position="top"
-                            title="Metadata: Data about data, or, data that describes other data. A key example would be the information that you see in the file explorer or Finder on a computer, such as date modified, file size, and file type. For the SHARE IT Act, metadata about the software, such as repository location, feedback mechanisms, and related ContractID(s), and contact information about the developers."
-                            style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">metadata</a> are
-                            <br><br>
-                            <strong>(1)</strong> owned by the agency, <br>
-                            <strong>(2)</strong> stored at no less than one public or private <a href="https://dsacms.github.io/ospo-guide/resources/glossary/#repository" target="_blank" rel="noopener noreferrer"
-                            class="usa-tooltip" data-position="top"
-                            title="Repository: Also known as “repo.” Repositories are easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private."
-                            style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">repository</a>, and <br>
-                            <strong>(3)</strong> accessible to federal employees under certain procedures. Agency
-                            contracts for
-                            custom-development of <a href="https://dsacms.github.io/ospo-guide/resources/glossary/#software" target="_blank" rel="noopener noreferrer" 
-                            class="usa-tooltip" data-position="top"
-                            title="Software: Refers to (i) computer programs that comprise a series of instructions, rules, routines, or statements, regardless of the media in which recorded, that allow or cause a computer to perform a specific operation or series of operations; and (ii) recorded information comprising source code listings, design details, algorithms, processes, flow charts, formulas, and related material that would enable the computer program to be produced, created, or compiled."
-                            style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">software</a> must acquire and exercise rights sufficient to allow
-                            government-wide access, sharing, <a href="https://dsacms.github.io/ospo-guide/resources/glossary/#software-reuse" target="_blank" rel="noopener noreferrer" 
-                            class="usa-tooltip" data-position="top"
-                            title="Software reuse: The practice of using existing software components, modules, or code to build new applications, rather than writing everything from scratch."
-                            style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">use</a>, and modification of any custom-developed code.
-                            <br><br>
-
-                            The bill does not apply to source code that is classified, developed primarily for use in a
-                            national security system, or developed by an element of the intelligence community.
-
-                            An agency's office of the chief information officer may <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/exemptions.md" target="_blank" rel="noopener noreferrer" 
-                            class="usa-tooltip" 
-                            data-position="top"
-                            title="Exemptions: Conditions defined by the SHARE IT Act or related regulations that prevent a code repository from being publicly released due to legal, security, privacy, or export control restrictions."
-                            style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">exempt</a> source code from being shared
-                            or made publicly accessible to protect individual privacy."
-                            <a href="https://www.congress.gov/bill/118th-congress/house-bill/9566" target="_blank" rel="noopener noreferrer">Bill Summary</a>
-                        </em>
-                    </p>
-
+                    code such as architecture designs and <a
+                        href="https://dsacms.github.io/ospo-guide/resources/glossary/#metadata" target="_blank"
+                        rel="noopener noreferrer" class="usa-tooltip" data-position="top"
+                        title="Metadata: Data about data, or, data that describes other data. A key example would be the information that you see in the file explorer or Finder on a computer, such as date modified, file size, and file type. For the SHARE IT Act, metadata about the software, such as repository location, feedback mechanisms, and related ContractID(s), and contact information about the developers."
+                        style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">metadata</a>
+                    are
+                    <br><br>
+                    <strong>(1)</strong> owned by the agency, <br>
+                    <strong>(2)</strong> stored at no less than one public or private <a
+                        href="https://dsacms.github.io/ospo-guide/resources/glossary/#repository" target="_blank"
+                        rel="noopener noreferrer" class="usa-tooltip" data-position="top"
+                        title="Repository: Also known as “repo.” Repositories are easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private."
+                        style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">repository</a>,
+                    and <br>
+                    <strong>(3)</strong> accessible to federal employees under certain procedures. Agency
+                    contracts for
+                    custom-development of <a href="https://dsacms.github.io/ospo-guide/resources/glossary/#software"
+                        target="_blank" rel="noopener noreferrer" class="usa-tooltip" data-position="top"
+                        title="Software: Refers to (i) computer programs that comprise a series of instructions, rules, routines, or statements, regardless of the media in which recorded, that allow or cause a computer to perform a specific operation or series of operations; and (ii) recorded information comprising source code listings, design details, algorithms, processes, flow charts, formulas, and related material that would enable the computer program to be produced, created, or compiled."
+                        style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">software</a>
+                    must acquire and exercise rights sufficient to allow
+                    government-wide access, sharing, <a
+                        href="https://dsacms.github.io/ospo-guide/resources/glossary/#software-reuse" target="_blank"
+                        rel="noopener noreferrer" class="usa-tooltip" data-position="top"
+                        title="Software reuse: The practice of using existing software components, modules, or code to build new applications, rather than writing everything from scratch."
+                        style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">use</a>,
+                    and modification of any custom-developed code.
                     <br><br>
 
-                    <h3 id="site-help">This website provides the following to help users become SHARE IT Act ready.</h3>
-                </div>
+                    The bill does not apply to source code that is classified, developed primarily for use in a
+                    national security system, or developed by an element of the intelligence community.
 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <a href="#documentation">
-                            <div class="feature-icon" aria-hidden="true">🏛️</div>
-                            <div class="feature-content">
-                                <h3 id="the-documentation">The Documentation</h3>
-                                <p>Library of information, including policies and guides, surrounding federal code
-                                    sharing.
-                                </p>
-                            </div>
-                        </a>
+                    An agency's office of the chief information officer may <a
+                        href="https://github.com/DSACMS/gov-codejson/blob/main/docs/exemptions.md" target="_blank"
+                        rel="noopener noreferrer" class="usa-tooltip" data-position="top"
+                        title="Exemptions: Conditions defined by the SHARE IT Act or related regulations that prevent a code repository from being publicly released due to legal, security, privacy, or export control restrictions."
+                        style="text-decoration: underline #000 dotted; font-size: 1em; color: inherit;">exempt</a>
+                    source code from being shared
+                    or made publicly accessible to protect individual privacy."
+                    <a href="https://www.congress.gov/bill/118th-congress/house-bill/9566" target="_blank"
+                        rel="noopener noreferrer">Bill Summary</a>
+                </em>
+            </p>
+
+            <br><br>
+
+            <h3 id="site-help">This website provides the following to help users become SHARE IT Act ready.</h3>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <a href="#documentation">
+                    <div class="feature-icon" aria-hidden="true">🏛️</div>
+                    <div class="feature-content">
+                        <h3 id="the-documentation">The Documentation</h3>
+                        <p>Library of information, including policies and guides, surrounding federal code
+                            sharing.
+                        </p>
                     </div>
-                    <div class="feature-card">
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md">
-                            <div class="feature-icon" aria-hidden="true">🔄</div>
-                            <div class="feature-content">
-                                <h3 id="the-metadata">The Metadata</h3>
-                                <p>Our code.json schema ensures consistent data collection across all software projects.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="feature-card">
-                        <a href="#tools">
-                            <div class="feature-icon" aria-hidden="true">🧰</div>
-                            <div class="feature-content">
-                                <h3 id="the-tools">The Tools</h3>
-                                <p>Suite of tools for generating, validating, and maintaining your projects code.json
-                                    file.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                </a>
             </div>
-        </section>
-
-        <!-- Documentation Section -->
-        <section class="documentation" id="documentation" aria-labelledby="documentation-heading">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="documentation-heading">Documentation</h2>
-                    <p>Guides and references for all things SHARE IT Act.</p>
-                </div>
-
-                <div class="doc-grid">
-                    <div class="doc-card">
-                        <h3 id="faq">FAQ</h3>
-                        <p>Common questions about the SHARE IT Act, code.json, and federal open source projects.</p>
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/faq.md" target="_blank"
-                            class="doc-link">View FAQ <span aria-hidden="true">→</span></a>
+            <div class="feature-card">
+                <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md">
+                    <div class="feature-icon" aria-hidden="true">🔄</div>
+                    <div class="feature-content">
+                        <h3 id="the-metadata">The Metadata</h3>
+                        <p>Our code.json schema ensures consistent data collection across all software projects.
+                        </p>
                     </div>
-                    <div class="doc-card">
-                        <h3 id="schemas">Schemas</h3>
-                        <p>Complete reference of all metadata fields, their descriptions, and requirements for
-                            code.json.</p>
-                        <a href=https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md target="_blank"
-                            class="doc-link">View Reference <span aria-hidden="true">→</span></a>
-                    </div>
-                    <div class="doc-card">
-                        <h3 id="implementation">Implementation</h3>
-                        <p>Step-by-step procedures for creating, updating, and maintaining code.json files in your
-                            repositories.</p>
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/procedures.md" target="_blank"
-                            class="doc-link">View Guide <span aria-hidden="true">→</span></a>
-                    </div>
-                    <div class="doc-card">
-                        <h3 id="metadata-card">Metadata</h3>
-                        <p>Real world example of compliant code.json file in a federal repository.</p>
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/examples.md" target="_blank"
-                            class="doc-link">View Examples <span aria-hidden="true">→</span></a>
-                    </div>
-                    <div class="doc-card">
-                        <h3 id="legislation">Legislation</h3>
-                        <p>Link to full text Public Law PDF of the SHARE IT Act. </p>
-                        <a href="https://www.congress.gov/118/plaws/publ187/PLAW-118publ187.pdf" target="_blank"
-                            class="doc-link">View Text <span aria-hidden="true">→</span></a>
-                    </div>
-                    <div class="doc-card">
-                        <h3 id="exemptions">Exemptions</h3>
-                        <p>Link to SHARE IT Act repository sharing exemptions</p>
-                        <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/exemptions.md" target="_blank"
-                            class="doc-link">View Text <span aria-hidden="true">→</span></a>
-                    </div>
-                    <div class="doc-card">
-                        <h3 id="glossary">Glossary</h3>
-                        <p>Link to Glossary of Helpful Terms in the SHARE IT Act</p>
-                        <a href="https://dsacms.github.io/ospo-guide/resources/glossary/" target="_blank"
-                            class="doc-link">View Text <span aria-hidden="true">→</span></a>
-                    </div>
-                </div>
+                </a>
             </div>
-        </section>
-
-        <!-- SHARE IT Journey Section -->
-        <section class="journey" id="journey" aria-labelledby="share-it-act-journey">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="journey-heading">SHARE IT Act Journey</h2>
-                    <p>Complete the following steps to bring your repository and agency into compliance with the SHARE
-                        IT Act</p>
-                </div>
-                <div class="compliance-section">
-                    <div class="compliance-process-section" id="repo-compliance">
-                        <div class="compliance-heading">
-                            <h3 id="repo-teams">For repositories managed by project teams: </h3>
-                        </div>
-                        <div class="journey-step" id="gather-info">
-                            <div class="step-header">
-                                <div class="doc-card-number">1</div>
-                                <h4>Identify key information about your repository
-                                </h4>
-                            </div>
-                            <div style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-ownership" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-ownership">
-                                        Is the project owned by the agency?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-maintenance" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-maintenance">
-                                        Is the project actively maintained or not?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-contract-numbers" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-contract-numbers">
-                                        Under which contract numbers was the project developed?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-repo-visibility" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-repo-visibility">
-                                        Is the project repository public or private?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-urls" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-urls">
-                                        What are the URLs for the project?
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-feedback" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-feedback">
-                                        What feedback mechanisms are in place for the project? (e.g. GitHub Issues)
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-freq-reuse" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-freq-reuse">
-                                        What is the estimated frequency of the project's reuse? (e.g.
-                                        forks, clones, downloads)
-                                    </label>
-                                </div>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="check-exempted" type="checkbox">
-                                    <label class="usa-checkbox__label" for="check-exempted">
-                                        Is my project exempted from the SHARE IT Act?
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step" id="add-code-json">
-                            <div class="step-header">
-                                <div class="doc-card-number">2</div>
-                                <h4>Add a <code>code.json</code> file to your repository to provide required project
-                                    metadata </h4>
-                                <br>
-                            </div>
-                            <div style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="codejson-generator-formsite" type="checkbox">
-                                    <label class="usa-checkbox__label" for="codejson-generator-formsite">
-                                        Use
-                                        <a href="https://dsacms.github.io/codejson-generator/" target="_blank"
-                                            rel="noopener noreferrer">
-                                            codejson-generator</a> website
-                                    </label>
-                                </div>
-                                <p style="margin-top: 0.75rem;">OR</p>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="automated-codejson-generator"
-                                        type="checkbox">
-                                    <label class="usa-checkbox__label" for="automated-codejson-generator">
-                                        Use
-                                        <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
-                                            rel="noopener noreferrer">
-                                            automated-codejson-generator</a> GitHub action
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="journey-step" id="going-forward">
-                            <div class="step-header">
-                                <div class="doc-card-number">3</div>
-                                <h4>Automate code.json updates for the future</h4>
-                            </div>
-                            <div class="journey-substeps" style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="automated-maintenance" type="checkbox">
-                                    <label class="usa-checkbox__label" for="automated-maintenance">
-                                        Add
-                                        <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
-                                            rel="noopener noreferrer">
-                                            automated-codejson-generator</a> to CI/CD for regular metadata updates
-
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+            <div class="feature-card">
+                <a href="#tools">
+                    <div class="feature-icon" aria-hidden="true">🧰</div>
+                    <div class="feature-content">
+                        <h3 id="the-tools">The Tools</h3>
+                        <p>Suite of tools for generating, validating, and maintaining your projects code.json
+                            file.
+                        </p>
                     </div>
-                    <div class="compliance-process-section" id="agency-compliance">
-                        <div class="compliance-heading">
-                            <h3 id="for-agencies">For agencies: </h3>
-                        </div>
-                        <div class="journey-step" id="identify-orgs">
-                            <div class="step-header">
-                                <div class="doc-card-number">1</div>
-                                <h4>Identify GitHub organizations and other platforms where source code is hosted</h4>
-                            </div>
-                        </div>
-                        <div class="journey-step" id="run-index-gen">
-                            <div class="step-header">
-                                <div class="doc-card-number">2</div>
-                                <h4>Generate the agency-index.json using index-generator</h4>
-                            </div>
-                            <div class="journey-substeps" style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="index-gen-website" type="checkbox">
-                                    <label class="usa-checkbox__label" for="index-gen-website">
-                                        Use the
-                                        <a href="https://dsacms.github.io/index-generator-website/" target="_blank"
-                                            rel="noopener noreferrer">
-                                            index-generator-website</a>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-                                    </label>
-                                </div>
-                                <p style="margin-top: 0.75rem;">OR</p>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="index-gen-tool" type="checkbox">
-                                    <label class="usa-checkbox__label" for="index-gen-tool">
-                                        Use the
-                                        <a href="https://github.com/DSACMS/codejson-index-generator" target="_blank"
-                                            rel="noopener noreferrer">
-                                            index-generator python tool</a>
+<!-- Documentation Section -->
+<section class="documentation" id="documentation" aria-labelledby="documentation-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="documentation-heading">Documentation</h2>
+            <p>Guides and references for all things SHARE IT Act.</p>
+        </div>
 
-                                    </label>
-                                </div>
-                            </div>
+        <div class="doc-grid">
+            <div class="doc-card">
+                <h3 id="faq">FAQ</h3>
+                <p>Common questions about the SHARE IT Act, code.json, and federal open source projects.</p>
+                <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/faq.md" target="_blank"
+                    class="doc-link">View FAQ <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+                <h3 id="schemas">Schemas</h3>
+                <p>Complete reference of all metadata fields, their descriptions, and requirements for
+                    code.json.</p>
+                <a href=https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md target="_blank"
+                    class="doc-link">View Reference <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+                <h3 id="implementation">Implementation</h3>
+                <p>Step-by-step procedures for creating, updating, and maintaining code.json files in your
+                    repositories.</p>
+                <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/procedures.md" target="_blank"
+                    class="doc-link">View Guide <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+                <h3 id="metadata-card">Metadata</h3>
+                <p>Real world example of compliant code.json file in a federal repository.</p>
+                <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/examples.md" target="_blank"
+                    class="doc-link">View Examples <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+                <h3 id="legislation">Legislation</h3>
+                <p>Link to full text Public Law PDF of the SHARE IT Act. </p>
+                <a href="https://www.congress.gov/118/plaws/publ187/PLAW-118publ187.pdf" target="_blank"
+                    class="doc-link">View Text <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+                <h3 id="exemptions">Exemptions</h3>
+                <p>Link to SHARE IT Act repository sharing exemptions</p>
+                <a href="https://github.com/DSACMS/gov-codejson/blob/main/docs/exemptions.md" target="_blank"
+                    class="doc-link">View Text <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+                <h3 id="glossary">Glossary</h3>
+                <p>Link to Glossary of Helpful Terms in the SHARE IT Act</p>
+                <a href="https://dsacms.github.io/ospo-guide/resources/glossary/" target="_blank" class="doc-link">View
+                    Text <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHARE IT Journey Section -->
+<section class="journey" id="journey" aria-labelledby="share-it-act-journey">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="journey-heading">SHARE IT Act Journey</h2>
+            <p>Complete the following steps to bring your repository and agency into compliance with the SHARE
+                IT Act</p>
+        </div>
+        <div class="compliance-section">
+            <div class="compliance-process-section" id="repo-compliance">
+                <div class="compliance-heading">
+                    <h3 id="repo-teams">For repositories managed by project teams: </h3>
+                </div>
+                <div class="journey-step" id="gather-info">
+                    <div class="step-header">
+                        <div class="doc-card-number">1</div>
+                        <h4>Identify key information about your repository
+                        </h4>
+                    </div>
+                    <div style="margin-left: 4em;">
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-ownership" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-ownership">
+                                Is the project owned by the agency?
+                            </label>
                         </div>
-                        <div class="journey-step" id="hosting-index">
-                            <div class="step-header">
-                                <div class="doc-card-number">3</div>
-                                <h4>Provide the index json file at: </h4>
-                            </div>
-                            <div style="margin-left: 4em;">
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="agency-tld" type="checkbox">
-                                    <label class="usa-checkbox__label" for="agency-tld">
-                                        Agency's top level domain (TLD)
-                                    </label>
-                                </div>
-                                <p style="margin-top: 0.75rem;">OR</p>
-                                <div class="usa-checkbox">
-                                    <input class="usa-checkbox__input" id="github-repo" type="checkbox">
-                                    <label class="usa-checkbox__label" for="github-repo">
-                                        a GitHub repository
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-maintenance" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-maintenance">
+                                Is the project actively maintained or not?
+                            </label>
+                        </div>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-contract-numbers" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-contract-numbers">
+                                Under which contract numbers was the project developed?
+                            </label>
+                        </div>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-repo-visibility" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-repo-visibility">
+                                Is the project repository public or private?
+                            </label>
+                        </div>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-urls" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-urls">
+                                What are the URLs for the project?
+                            </label>
+                        </div>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-feedback" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-feedback">
+                                What feedback mechanisms are in place for the project? (e.g. GitHub Issues)
+                            </label>
+                        </div>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-freq-reuse" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-freq-reuse">
+                                What is the estimated frequency of the project's reuse? (e.g.
+                                forks, clones, downloads)
+                            </label>
+                        </div>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="check-exempted" type="checkbox">
+                            <label class="usa-checkbox__label" for="check-exempted">
+                                Is my project exempted from the SHARE IT Act?
+                            </label>
                         </div>
                     </div>
                 </div>
-                <div class="compliance-process-section" id="egov-congress-report">
-                    <div class="compliance-heading">
-                        <h3 id="for-congress">For report to Congress: </h3>
+                <div class="journey-step" id="add-code-json">
+                    <div class="step-header">
+                        <div class="doc-card-number">2</div>
+                        <h4>Add a <code>code.json</code> file to your repository to provide required project
+                            metadata </h4>
+                        <br>
                     </div>
-                    <div class="journey-step" id="identify-orgs">
-                        <div class="step-header">
-                            <div class="doc-card-number">1</div>
-                            <h4>
-                                <a href="https://dsacms.github.io/code-gov/" target="_blank" rel="noopener noreferrer">
-                                    code-gov</a> serves as an inventory of all source code metadata
-                                in the federal
-                                government
-                            </h4>
+                    <div style="margin-left: 4em;">
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="codejson-generator-formsite" type="checkbox">
+                            <label class="usa-checkbox__label" for="codejson-generator-formsite">
+                                Use
+                                <a href="https://dsacms.github.io/codejson-generator/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    codejson-generator</a> website
+                            </label>
+                        </div>
+                        <p style="margin-top: 0.75rem;">OR</p>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="automated-codejson-generator" type="checkbox">
+                            <label class="usa-checkbox__label" for="automated-codejson-generator">
+                                Use
+                                <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
+                                    rel="noopener noreferrer">
+                                    automated-codejson-generator</a> GitHub action
+                            </label>
                         </div>
                     </div>
-                    <div class="journey-step" id="run-index-gen">
-                        <div class="step-header">
-                            <div class="doc-card-number">2</div>
-                            <h4> Administrator of the Office of Electronic Government submits a report with a list
-                                of all exempted software including narrative justifications</h4>
-                        </div>
+                </div>
+                <div class="journey-step" id="going-forward">
+                    <div class="step-header">
+                        <div class="doc-card-number">3</div>
+                        <h4>Automate code.json updates for the future</h4>
                     </div>
-                    <div class="journey-step" id="hosting-index">
-                        <div class="step-header">
-                            <div class="doc-card-number">3</div>
-                            <h4>Comptroller General of the United States submits a report including an assessment of
-                                the implementation of the act </h4>
+                    <div class="journey-substeps" style="margin-left: 4em;">
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="automated-maintenance" type="checkbox">
+                            <label class="usa-checkbox__label" for="automated-maintenance">
+                                Add
+                                <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
+                                    rel="noopener noreferrer">
+                                    automated-codejson-generator</a> to CI/CD for regular metadata updates
+
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Tools Section -->
-        <section class="tools" id="tools" aria-labelledby="tools-heading">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="tools-heading">Tools</h2>
-                    <p>Utilities and tools to help generate, validate, and manage, and visualize repository metadata.
-                    </p>
+            <div class="compliance-process-section" id="agency-compliance">
+                <div class="compliance-heading">
+                    <h3 id="for-agencies">For agencies: </h3>
                 </div>
-
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/form-generator.svg" alt="Code.json Generator Form interface" />
-                            <div class="badge" aria-label="Category">Webform</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="web-form-generator">Web Form Generator</h3>
-                            <p>A step-by-step interactive web form for creating, generating, and downloading a valid
-                                code.json file.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Interactive</span>
-                                <span class="tool-tag">Browser</span>
-                            </div>
-                            <a href="https://dsacms.github.io/codejson-generator" target="_blank" class="btn">Open
-                                Tool</a>
-                        </div>
+                <div class="journey-step" id="identify-orgs">
+                    <div class="step-header">
+                        <div class="doc-card-number">1</div>
+                        <h4>Identify GitHub organizations and other platforms where source code is hosted</h4>
                     </div>
-
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/index-generator.svg" alt="Code.json Index Generator interface" />
-                            <div class="badge" aria-label="Category">CLI</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="index-generator">Index Generator</h3>
-                            <p>Python-based CLI tool that scans GitHub repositories for code.json files, and generates
-                                an index file for agency-wide reporting.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Python</span>
-                                <span class="tool-tag">Aggregation</span>
-                            </div>
-                            <a href="https://dsacms.github.io/index-generator-website/" target="_blank" class="btn">View
-                                on GitHub</a>
-                        </div>
+                </div>
+                <div class="journey-step" id="run-index-gen">
+                    <div class="step-header">
+                        <div class="doc-card-number">2</div>
+                        <h4>Generate the agency-index.json using index-generator</h4>
                     </div>
+                    <div class="journey-substeps" style="margin-left: 4em;">
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="index-gen-website" type="checkbox">
+                            <label class="usa-checkbox__label" for="index-gen-website">
+                                Use the
+                                <a href="https://dsacms.github.io/index-generator-website/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    index-generator-website</a>
 
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/auto-generator.svg" alt="Automated Generator interface" />
-                            <div class="badge" aria-label="Category">GitHub Action</div>
+                            </label>
                         </div>
-                        <div class="tool-content">
-                            <h3 id="automated-generator">Automated Generator</h3>
-                            <p>GitHub Action that automatically generates and updates code.json files. It can computes
-                                labor hours, detect languages, and maintain accurate metadata.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Automation</span>
-                                <span class="tool-tag">CI/CD</span>
-                            </div>
-                            <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank"
-                                class="btn">View on GitHub</a>
-                        </div>
-                    </div>
+                        <p style="margin-top: 0.75rem;">OR</p>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="index-gen-tool" type="checkbox">
+                            <label class="usa-checkbox__label" for="index-gen-tool">
+                                Use the
+                                <a href="https://github.com/DSACMS/codejson-index-generator" target="_blank"
+                                    rel="noopener noreferrer">
+                                    index-generator python tool</a>
 
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/repo-scaffolder.svg" alt="Repository Scaffolder interface" />
-                            <div class="badge" aria-label="Category">CLI</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="repository-scaffolder">Repository Scaffolder</h3>
-                            <p>Template generator for creating new repositories with all the necessary documentation and
-                                code.json files pre-configured according to standards.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Cookiecutter</span>
-                                <span class="tool-tag">Templates</span>
-                            </div>
-                            <a href="https://github.com/DSACMS/repo-scaffolder" target="_blank" class="btn">View on
-                                GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/metrics.svg" alt="Metrics interface" />
-                            <div class="badge" aria-label="Category">Website</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="metrics">Metrics</h3>
-                            <p>Website to view statistics and data visualizations about open source projects at the
-                                repository or organization level.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Browser</span>
-                                <span class="tool-tag">Data Visualizations</span>
-                            </div>
-                            <a href="https://dsacms.github.io/metrics/" target="_blank" class="btn">Open Tool</a>
-                        </div>
-                    </div>
-
-                    <div class="tool-card">
-                        <div class="tool-header">
-                            <img src="assets/images/repolinter.svg" alt="Repolinter interface" />
-                            <div class="badge" aria-label="Category">Github Action</div>
-                        </div>
-                        <div class="tool-content">
-                            <h3 id="repolinter-actions">Repolinter Actions</h3>
-                            <p>A Github Action that pre-populates documentation based repository maturity.</p>
-                            <div class="tool-tags" aria-label="Features">
-                                <span class="tool-tag">Automation</span>
-                                <span class="tool-tag">CI/CD</span>
-                            </div>
-                            <a href="https://github.com/DSACMS/repolinter-actions" target="_blank" class="btn">View on
-                                GitHub</a>
+                            </label>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta" id="cta" aria-labelledby="cta-heading">
-            <div class="container">
-                <h2 id="cta-heading">Ready to be Compliant?</h2>
-                <p>By taking our short quiz, we can help guide you through the process.</p>
-                <a href="#" id="open-quiz-btn" class="btn">Take the Quiz</a>
-            </div>
-        </section>
-
-        <!-- Quiz Section -->
-        <section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
-                    <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
-                        Act:</p>
-                </div>
-
-                <!-- Quiz Container -->
-                <div class="quiz">
-                    <div class="form-container">
-                        <form class="usa-form">
-                            <!-- Form is dynamically created -->
-                        </form>
+                <div class="journey-step" id="hosting-index">
+                    <div class="step-header">
+                        <div class="doc-card-number">3</div>
+                        <h4>Provide the index json file at: </h4>
                     </div>
-                </div>
-
-                <div class="results" style="display: none;">
-                    <p class="tier-result">Your readiness level is: </p>
-                    <div id="compliance-details"></div>
-                    <br>
-                    <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- CMS Footer -->
-    <footer class="usa-footer site-footer" role="contentinfo">
-        <div class="footer-section-bottom bg-base-darker">
-            <div class="grid-container">
-                <div class="grid-row">
-                    <div class="footer-simple-content">
-                        <p class="footer-text">This site is maintained by <a
-                                href="https://www.cms.gov/digital-service/open-source-program-office"
-                                class="footer-link">the CMS Open Source Program Office</a>.</p>
-                        <p class="footer-text">Read our <a
-                                href="https://github.com/DSACMS/ospo-guide/blob/main/LINKING_POLICY.md"
-                                class="footer-link">linking policy</a>.</p>
-                        <p class="footer-text">Have questions or want to contact us? Email us at <a
-                                href="mailto:opensource@cms.hhs.gov" class="footer-link">opensource@cms.hhs.gov</a>.</p>
+                    <div style="margin-left: 4em;">
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="agency-tld" type="checkbox">
+                            <label class="usa-checkbox__label" for="agency-tld">
+                                Agency's top level domain (TLD)
+                            </label>
+                        </div>
+                        <p style="margin-top: 0.75rem;">OR</p>
+                        <div class="usa-checkbox">
+                            <input class="usa-checkbox__input" id="github-repo" type="checkbox">
+                            <label class="usa-checkbox__label" for="github-repo">
+                                a GitHub repository
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <div class="usa-identifier">
-        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
-            <div class="usa-identifier__container">
-                <div class="cms-identifier">
-                    <div class="cms-logos">
-                        <a href="https://hhs.gov" class="cms-logo-link">
-                            <img src="assets/images/hhs-white.svg" class="cms-logo-img" alt="HHS logo">
-                        </a>
-                        <a href="https://cms.gov" class="cms-logo-link">
-                            <img src="assets/images/cms-white.svg" class="cms-logo-img" alt="CMS logo">
-                        </a>
-                    </div>
-                    <div class="cms-identity">
-                        <p class="cms-domain">cms.gov</p>
-                        <p class="cms-disclaimer">
-                            An official website of the <a href="https://hhs.gov">Department of Health and Human
-                                Services</a> and the
-                            <a href="https://cms.gov">Centers for Medicare and Medicaid Services</a>
-                        </p>
-                    </div>
+        <div class="compliance-process-section" id="egov-congress-report">
+            <div class="compliance-heading">
+                <h3 id="for-congress">For report to Congress: </h3>
+            </div>
+            <div class="journey-step" id="identify-orgs">
+                <div class="step-header">
+                    <div class="doc-card-number">1</div>
+                    <h4>
+                        <a href="https://dsacms.github.io/code-gov/" target="_blank" rel="noopener noreferrer">
+                            code-gov</a> serves as an inventory of all source code metadata
+                        in the federal
+                        government
+                    </h4>
                 </div>
             </div>
-        </section>
-        <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links,,,">
-            <div class="usa-identifier__container">
-                <div class="footer-links-wrapper">
-                    <div class="footer-links-group">
-                        <a href="https://www.cms.gov/about-cms/about-cms"
-                            class="usa-identifier__required-link usa-link">About CMS</a>
-                        <a href="https://www.cms.gov/about-cms/agency-information/aboutwebsite/cmsnondiscriminationnotice"
-                            class="usa-identifier__required-link usa-link">Accessibility statement</a>
-                    </div>
-
-                    <div class="footer-links-group">
-                        <a href="https://www.cms.gov/freedom-information-act-foia-service-center"
-                            class="usa-identifier__required-link usa-link">FOIA requests</a>
-                        <a href="https://www.cms.gov/about-cms/agency-information/aboutwebsite/nofearact"
-                            class="usa-identifier__required-link usa-link">No FEAR Act data</a>
-                    </div>
-
-                    <div class="footer-links-group">
-                        <a href="https://www.oig.hhs.gov/" class="usa-identifier__required-link usa-link">Office of the
-                            Inspector General</a>
-                        <a href="https://www.cms.gov/About-CMS/Agency-Information/PerformanceBudget"
-                            class="usa-identifier__required-link usa-link">Performance reports</a>
-                    </div>
-
-                    <div class="footer-links-group">
-                        <a href="https://www.cms.gov/privacy" class="usa-identifier__required-link usa-link">Privacy
-                            policy</a>
-                    </div>
+            <div class="journey-step" id="run-index-gen">
+                <div class="step-header">
+                    <div class="doc-card-number">2</div>
+                    <h4> Administrator of the Office of Electronic Government submits a report with a list
+                        of all exempted software including narrative justifications</h4>
                 </div>
             </div>
-        </nav>
-        <section class="usa-identifier__section usa-identifier__section--usagov"
-            aria-label="U.S. government information and services">
-            <div class="usa-identifier__container">
-                <div class="usagov-container">
-                    <div class="usagov-text">Looking for U.S. government information and services?</div>
-                    <a href="https://www.usa.gov/" class="usagov-link">Visit USA.gov</a>
+            <div class="journey-step" id="hosting-index">
+                <div class="step-header">
+                    <div class="doc-card-number">3</div>
+                    <h4>Comptroller General of the United States submits a report including an assessment of
+                        the implementation of the act </h4>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-</body>
+</section>
+
+<!-- Tools Section -->
+<section class="tools" id="tools" aria-labelledby="tools-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="tools-heading">Tools</h2>
+            <p>Utilities and tools to help generate, validate, and manage, and visualize repository metadata.
+            </p>
+        </div>
+
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-header">
+                    <img src="assets/images/form-generator.svg" alt="Code.json Generator Form interface" />
+                    <div class="badge" aria-label="Category">Webform</div>
+                </div>
+                <div class="tool-content">
+                    <h3 id="web-form-generator">Web Form Generator</h3>
+                    <p>A step-by-step interactive web form for creating, generating, and downloading a valid
+                        code.json file.</p>
+                    <div class="tool-tags" aria-label="Features">
+                        <span class="tool-tag">Interactive</span>
+                        <span class="tool-tag">Browser</span>
+                    </div>
+                    <a href="https://dsacms.github.io/codejson-generator" target="_blank" class="btn">Open
+                        Tool</a>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-header">
+                    <img src="assets/images/index-generator.svg" alt="Code.json Index Generator interface" />
+                    <div class="badge" aria-label="Category">CLI</div>
+                </div>
+                <div class="tool-content">
+                    <h3 id="index-generator">Index Generator</h3>
+                    <p>Python-based CLI tool that scans GitHub repositories for code.json files, and generates
+                        an index file for agency-wide reporting.</p>
+                    <div class="tool-tags" aria-label="Features">
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Aggregation</span>
+                    </div>
+                    <a href="https://dsacms.github.io/index-generator-website/" target="_blank" class="btn">View
+                        on GitHub</a>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-header">
+                    <img src="assets/images/auto-generator.svg" alt="Automated Generator interface" />
+                    <div class="badge" aria-label="Category">GitHub Action</div>
+                </div>
+                <div class="tool-content">
+                    <h3 id="automated-generator">Automated Generator</h3>
+                    <p>GitHub Action that automatically generates and updates code.json files. It can computes
+                        labor hours, detect languages, and maintain accurate metadata.</p>
+                    <div class="tool-tags" aria-label="Features">
+                        <span class="tool-tag">Automation</span>
+                        <span class="tool-tag">CI/CD</span>
+                    </div>
+                    <a href="https://github.com/DSACMS/automated-codejson-generator" target="_blank" class="btn">View on
+                        GitHub</a>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-header">
+                    <img src="assets/images/repo-scaffolder.svg" alt="Repository Scaffolder interface" />
+                    <div class="badge" aria-label="Category">CLI</div>
+                </div>
+                <div class="tool-content">
+                    <h3 id="repository-scaffolder">Repository Scaffolder</h3>
+                    <p>Template generator for creating new repositories with all the necessary documentation and
+                        code.json files pre-configured according to standards.</p>
+                    <div class="tool-tags" aria-label="Features">
+                        <span class="tool-tag">Cookiecutter</span>
+                        <span class="tool-tag">Templates</span>
+                    </div>
+                    <a href="https://github.com/DSACMS/repo-scaffolder" target="_blank" class="btn">View on
+                        GitHub</a>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-header">
+                    <img src="assets/images/metrics.svg" alt="Metrics interface" />
+                    <div class="badge" aria-label="Category">Website</div>
+                </div>
+                <div class="tool-content">
+                    <h3 id="metrics">Metrics</h3>
+                    <p>Website to view statistics and data visualizations about open source projects at the
+                        repository or organization level.</p>
+                    <div class="tool-tags" aria-label="Features">
+                        <span class="tool-tag">Browser</span>
+                        <span class="tool-tag">Data Visualizations</span>
+                    </div>
+                    <a href="https://dsacms.github.io/metrics/" target="_blank" class="btn">Open Tool</a>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-header">
+                    <img src="assets/images/repolinter.svg" alt="Repolinter interface" />
+                    <div class="badge" aria-label="Category">Github Action</div>
+                </div>
+                <div class="tool-content">
+                    <h3 id="repolinter-actions">Repolinter Actions</h3>
+                    <p>A Github Action that pre-populates documentation based repository maturity.</p>
+                    <div class="tool-tags" aria-label="Features">
+                        <span class="tool-tag">Automation</span>
+                        <span class="tool-tag">CI/CD</span>
+                    </div>
+                    <a href="https://github.com/DSACMS/repolinter-actions" target="_blank" class="btn">View on
+                        GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta" id="cta" aria-labelledby="cta-heading">
+    <div class="container">
+        <h2 id="cta-heading">Ready to be Compliant?</h2>
+        <p>By taking our short quiz, we can help guide you through the process.</p>
+        <a href="#" id="open-quiz-btn" class="btn">Take the Quiz</a>
+    </div>
+</section>
+
+<!-- Quiz Section -->
+<section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
+            <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
+                Act:</p>
+        </div>
+
+        <!-- Quiz Container -->
+        <div class="quiz">
+            <div class="form-container">
+                <form class="usa-form">
+                    <!-- Form is dynamically created -->
+                </form>
+            </div>
+        </div>
+
+        <div class="results" style="display: none;">
+            <p class="tier-result">Your readiness level is: </p>
+            <div id="compliance-details"></div>
+            <br>
+            <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
+        </div>
+    </div>
+</section>
 
 </html>
