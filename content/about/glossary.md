@@ -1,11 +1,11 @@
 ---
 title: Glossary
 description: 'A glossary of definitions for frequently asked words and phrases'
-permalink: /glossary/
+permalink: /about/glossary/
 layout: layouts/page
-tags: ospo
+tags: shareit
 eleventyNavigation:
-  parent: about
+  parent: shareit-about
   key: shareit-about-glossary
   order: 2
   title: Glossary
