@@ -1,7 +1,7 @@
 ---
 title: Glossary
 description: 'A glossary of definitions for frequently asked words and phrases'
-permalink: /about/glossary/
+permalink: /glossary/
 layout: layouts/page
 tags: ospo
 eleventyNavigation:

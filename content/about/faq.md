@@ -1,19 +1,17 @@
 ---
 title: Frequently Asked Questions (FAQs)
 description: 'Frequently Asked Questions'
-permalink: /about/faq
+permalink: /about/FAQ/
 layout: layouts/page
-tags: codegov
+tags: shareit
 eleventyNavigation:
-  parent: codegov-about
-  key: codegov-about-faq
+  parent: shareit-about
+  key: shareit-about-faq
   order: 3
   title: Frequently Asked Questions
 sidenav: true
 sticky_sidenav: true
 ---
-
-# Frequently Asked Questions (FAQs)
 
 ## Policies
 
