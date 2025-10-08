@@ -1,0 +1,29 @@
+# The primary navigation
+shareit:
+  - name: Overview
+    url: /
+  
+  - name: Schema
+    url: /schema/
+  
+  - name: Form
+    url: https://dsacms.github.io/codejson-generator/
+    children:
+      - name: General
+        url: https://dsacms.github.io/codejson-generator/
+      - name: CMS
+        url: https://dsacms.github.io/codejson-generator/cms/
+  
+  - name: Index Generator
+    url: https://dsacms.github.io/index-generator-website/
+  
+  - name: Inventory
+    url: https://dsacms.github.io/code-gov/
+
+  - name: About
+    url: /about/
+    children:
+      - name: FAQ
+        url: /about/FAQ/
+      - name: Glossary
+        url: /about/glossary/
