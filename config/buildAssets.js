@@ -64,6 +64,7 @@ esbuild
     entryPoints: [
       'assets/_common/styles/styles.scss',
       'assets/_common/js/app.js',
+      'assets/_common/js/main.js'
     ],
     entryNames: '[dir]/[name]-[hash]',
     outdir: '_site/assets/',

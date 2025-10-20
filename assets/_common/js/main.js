@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const feedbackBanner = document.querySelector('.feedback-banner');
-    const cmsHeader = document.querySelector('.cms-header');
-    
+    const cmsHeader = document.querySelector('.feedback-banner');
+
     if (feedbackBanner && cmsHeader) {
         const bannerHeight = feedbackBanner.offsetHeight - 1;
         cmsHeader.style.top = bannerHeight + 'px';
@@ -27,26 +27,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Add smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    // // Add smooth scrolling for anchor links
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault();
 
-            const target = document.querySelector(this.getAttribute('href'));
+    //         console.log("anchor", anchor);
 
-            if (target) {
-                // Adjust the scroll position to account for the fixed header
-                const headerHeight = document.querySelector('.cms-header').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-                const offsetPosition = targetPosition - headerHeight;
+    //         const target = document.querySelector(this.getAttribute('href'));
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+    //         if (target) {
+    //             // Adjust the scroll position to account for the fixed header
+    //             const headerHeight = document.querySelector('.cms-header').offsetHeight;
+    //             const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+    //             const offsetPosition = targetPosition - headerHeight;
+
+    //             window.scrollTo({
+    //                 top: offsetPosition,
+    //                 behavior: 'smooth'
+    //             });
+    //         }
+    //     });
+    // });
 
     // Keyboard navigation for cards
     const cards = document.querySelectorAll('.feature-card, .doc-card, .tool-card');
@@ -96,23 +98,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const ctaSection = document.getElementById('cta');
         const quizSection = document.getElementById('quiz-section');
         const quizVisible = quizSection.style.display !== 'none';
-        
+
         const ctaTop = ctaSection.offsetTop - totalOffset;
         const ctaBottom = ctaTop + ctaSection.offsetHeight;
-        
+
         const quizTop = quizVisible ? (quizSection.offsetTop - totalOffset) : Number.MAX_VALUE;
         const quizBottom = quizVisible ? (quizTop + quizSection.offsetHeight) : Number.MAX_VALUE;
-        
-        const ctaInView = 
-            (scrollPosition <= ctaTop && scrollBottom >= ctaTop) || 
+
+        const ctaInView =
+            (scrollPosition <= ctaTop && scrollBottom >= ctaTop) ||
             (scrollPosition >= ctaTop && scrollPosition < ctaBottom) ||
             (scrollBottom >= document.body.scrollHeight - 100 && !quizVisible);
-            
+
         const quizInView = quizVisible && (
-            (scrollPosition <= quizTop && scrollBottom >= quizTop) || 
+            (scrollPosition <= quizTop && scrollBottom >= quizTop) ||
             (scrollPosition >= quizTop && scrollPosition < quizBottom)
         );
-        
+
         if (ctaInView || quizInView) {
             navItems.forEach(item => {
                 if (item.getAttribute('href') === '#cta') {
@@ -123,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         let currentSection = null;
-        
+
         sections.forEach(section => {
             if (section.id === 'hero' || section.id === 'cta' || section.id === 'quiz-section') return;
 
@@ -157,28 +159,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const complianceDetails = document.getElementById('compliance-details');
     const resetBtn = document.getElementById('quiz-reset-btn');
 
+    console.log("main has run");
+    console.log("openQuizBtn", openQuizBtn);
+    console.log("quizSection", quizSection);
+
     if (openQuizBtn && quizSection) {
-        openQuizBtn.addEventListener('click', function(e) {
+        openQuizBtn.addEventListener('click', function (e) {
             e.preventDefault();
             quizSection.style.display = 'block';
-            
+
             setActiveNavItem();
         });
 
         // Handle the quiz submission
-        quizForm.addEventListener('submit', function(e) {
+        quizForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get the selected values from the form
             const role = document.querySelector('input[name="user-role"]:checked')?.value;
             const familiarity = document.querySelector('input[name="familiarity"]:checked')?.value;
             const repoStatus = document.querySelector('input[name="repo-status"]:checked')?.value;
-            
+
             // Default guidance if something goes wrong
             let guidanceTitle = "Getting Started with SHARE IT Act";
             let guidanceText = "";
             let resourceLinks = "";
-            
+
             // Determine guidance based on user selections
             if (role === 'developer') {
                 if (familiarity === 'new') {
@@ -241,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <a href="https://dsacms.github.io/codejson-generator" target="_blank" class="doc-link">Web Form Generator</a>
                 `;
             }
-            
+
             // Update and show results
             tierResult.textContent = guidanceTitle;
             complianceDetails.innerHTML = `
@@ -251,24 +257,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     ${resourceLinks}
                 </div>
             `;
-            
+
             quizForm.style.display = 'none';
             resultsDiv.style.display = 'block';
         });
-        
+
         // Reset the quiz
         if (resetBtn) {
-            resetBtn.addEventListener('click', function(e) {
+            resetBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 quizForm.reset();
                 quizForm.style.display = 'block';
                 resultsDiv.style.display = 'none';
             });
         }
-        
+
         // Update the quiz content
-        const updateQuizContent = function() {
-            const quizContainer = document.querySelector('#quiz-section .usa-form');
+        const updateQuizContent = function () {
+            const quizContainer = document.querySelector('.quiz .usa-form');
             if (quizContainer) {
                 quizContainer.innerHTML = `
                     <fieldset class="usa-fieldset">
