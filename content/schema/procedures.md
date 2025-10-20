@@ -7,7 +7,7 @@ tags: shareit
 eleventyNavigation:
   parent: shareit-schema
   key: shareit-schema-procedures
-  order: 2
+  order: 3
   title: Procedures
 sidenav: true
 sticky_sidenav: true

@@ -7,7 +7,7 @@ tags: shareit
 eleventyNavigation:
   parent: shareit-schema
   key: shareit-schema-agencyindex
-  order: 3
+  order: 2
   title: agency-index.json
 sidenav: true
 sticky_sidenav: true

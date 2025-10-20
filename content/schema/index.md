@@ -875,6 +875,8 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
 
 Full schema can be found in the [gov-codejson repository](https://github.com/DSACMS/gov-codejson/blob/main/schemas/cms/schema-2.0.0.json).
 
+Examples of code.json files can be found here: [https://github.com/DSACMS/gov-codejson/blob/main/docs/examples.md](https://github.com/DSACMS/gov-codejson/blob/main/docs/examples.md)
+
 ### Adding new metadata fields
 
 For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
