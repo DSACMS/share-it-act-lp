@@ -523,11 +523,38 @@ eleventyExcludeFromCollections: true
 </section>
 
 <!-- CTA Section -->
-<section class="cta" id="cta" aria-labelledby="cta-heading">
+<!-- <section class="cta" id="cta" aria-labelledby="cta-heading">
     <div class="container">
         <h2 id="cta-heading">Ready to be Compliant?</h2>
         <p>By taking our short quiz, we can help guide you through the process.</p>
         <a href="#" id="open-quiz-btn" class="btn">Take the Quiz</a>
+    </div>
+</section> -->
+
+<!-- Quiz Section -->
+<section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
+            <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
+                Act:</p>
+        </div>
+
+        <!-- Quiz Container -->
+        <div class="quiz">
+            <div class="form-container">
+                <form class="usa-form">
+                    <!-- Form is dynamically created -->
+                </form>
+            </div>
+        </div>
+
+        <div class="results" style="display: none;">
+            <p class="tier-result">Your readiness level is: </p>
+            <div id="compliance-details"></div>
+            <br>
+            <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
+        </div>
     </div>
 </section>
 
@@ -557,34 +584,7 @@ eleventyExcludeFromCollections: true
         </div>
     </div>
 </section>
-
-        <!-- Quiz Section -->
-        <section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
-                    <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
-                        Act:</p>
-                </div>
-
-                <!-- Quiz Container -->
-                <div class="quiz">
-                    <div class="form-container">
-                        <form class="usa-form">
-                            <!-- Form is dynamically created -->
-                        </form>
-                    </div>
-                </div>
-
-                <div class="results" style="display: none;">
-                    <p class="tier-result">Your readiness level is: </p>
-                    <div id="compliance-details"></div>
-                    <br>
-                    <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
-                </div>
-            </div>
-        </section>
-    </main>
+</main>
 </body>
 
 <!-- CTA Section -->
