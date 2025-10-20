@@ -1,7 +1,7 @@
 ---
 title: Procedures
 description: Tools to create and update metadata in repositories
-permalink: /schema/procedures
+permalink: /schema/procedures/
 layout: layouts/page
 tags: shareit
 eleventyNavigation:

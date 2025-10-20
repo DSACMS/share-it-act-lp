@@ -1,7 +1,7 @@
 ---
 title: Frequently Asked Questions (FAQs)
 description: Frequently Asked Questions
-permalink: /schema/faq
+permalink: /schema/faq/
 layout: layouts/page
 tags: shareit
 eleventyNavigation:

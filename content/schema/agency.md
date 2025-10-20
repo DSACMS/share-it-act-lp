@@ -1,7 +1,7 @@
 ---
 title: agency-index.json
 description: Tools to create and update metadata in repositories
-permalink: /schema/agency-index
+permalink: /schema/agency-index/
 layout: layouts/page
 tags: shareit
 eleventyNavigation:
