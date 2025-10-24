@@ -255,7 +255,9 @@ eleventyExcludeFromCollections: true
                         <div class="usa-checkbox">
                             <input class="usa-checkbox__input" id="check-exempted" type="checkbox">
                             <label class="usa-checkbox__label" for="check-exempted">
-                                Is my project exempted from the SHARE IT Act?
+                                Is my project <a
+                                    href="https://dsacms.github.io/share-it-act-lp/schema/exemptions/">exempted</a> from
+                                the SHARE IT Act?
                             </label>
                         </div>
                     </div>
@@ -430,25 +432,6 @@ eleventyExcludeFromCollections: true
                         Tool</a>
                 </div>
             </div>
-
-            <div class="tool-card">
-                <div class="tool-header">
-                    {% image_with_class "assets/home/img/index-generator.svg" "index-generator-img" "Code.json Index Generator" %}
-                    <div class="badge" aria-label="Category">CLI</div>
-                </div>
-                <div class="tool-content">
-                    <h3 id="index-generator">Index Generator</h3>
-                    <p>Python-based CLI tool that scans GitHub repositories for code.json files, and generates
-                        an index file for agency-wide reporting.</p>
-                    <div class="tool-tags" aria-label="Features">
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Aggregation</span>
-                    </div>
-                    <a href="https://dsacms.github.io/index-generator-website/" target="_blank" class="btn">View
-                        on GitHub</a>
-                </div>
-            </div>
-
             <div class="tool-card">
                 <div class="tool-header">
                     {% image_with_class "assets/home/img/auto-generator.svg" "auto-generator-img" "Code.json Automated Generator" %}
@@ -466,160 +449,24 @@ eleventyExcludeFromCollections: true
                         GitHub</a>
                 </div>
             </div>
-
             <div class="tool-card">
                 <div class="tool-header">
-                    {% image_with_class "assets/home/img/repo-scaffolder.svg" "repo-scaffolder-img" "repo-scaffolder" %}
+                    {% image_with_class "assets/home/img/index-generator.svg" "index-generator-img" "Code.json Index Generator" %}
                     <div class="badge" aria-label="Category">CLI</div>
                 </div>
                 <div class="tool-content">
-                    <h3 id="repository-scaffolder">Repository Scaffolder</h3>
-                    <p>Template generator for creating new repositories with all the necessary documentation and
-                        code.json files pre-configured according to standards.</p>
+                    <h3 id="index-generator">Index Generator</h3>
+                    <p>Python-based CLI tool that scans GitHub repositories for code.json files, and generates
+                        an index file for agency-wide reporting.</p>
                     <div class="tool-tags" aria-label="Features">
-                        <span class="tool-tag">Cookiecutter</span>
-                        <span class="tool-tag">Templates</span>
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Aggregation</span>
                     </div>
-                    <a href="https://github.com/DSACMS/repo-scaffolder" target="_blank" class="btn">View on
-                        GitHub</a>
+                    <a href="https://github.com/DSACMS/codejson-index-generator" target="_blank" class="btn" style="margin-bottom: 5px">Open Tool</a>
+                    <a href="https://dsacms.github.io/index-generator-website" target="_blank" class="btn">View
+                        on GitHub</a>
                 </div>
             </div>
-
-            <div class="tool-card">
-                <div class="tool-header">
-                    {% image_with_class "assets/home/img/metrics.svg" "metrics-img" "Metrics" %}
-                    <div class="badge" aria-label="Category">Website</div>
-                </div>
-                <div class="tool-content">
-                    <h3 id="metrics">Metrics</h3>
-                    <p>Website to view statistics and data visualizations about open source projects at the
-                        repository or organization level.</p>
-                    <div class="tool-tags" aria-label="Features">
-                        <span class="tool-tag">Browser</span>
-                        <span class="tool-tag">Data Visualizations</span>
-                    </div>
-                    <a href="https://dsacms.github.io/metrics/" target="_blank" class="btn">Open Tool</a>
-                </div>
-            </div>
-
-            <div class="tool-card">
-                <div class="tool-header">
-                    {% image_with_class "assets/home/img/repolinter.svg" "repolinter-img" "Repolinter" %}
-                    <div class="badge" aria-label="Category">Github Action</div>
-                </div>
-                <div class="tool-content">
-                    <h3 id="repolinter-actions">Repolinter Actions</h3>
-                    <p>A Github Action that pre-populates documentation based repository maturity.</p>
-                    <div class="tool-tags" aria-label="Features">
-                        <span class="tool-tag">Automation</span>
-                        <span class="tool-tag">CI/CD</span>
-                    </div>
-                    <a href="https://github.com/DSACMS/repolinter-actions" target="_blank" class="btn">View on
-                        GitHub</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<!-- <section class="cta" id="cta" aria-labelledby="cta-heading">
-    <div class="container">
-        <h2 id="cta-heading">Ready to be Compliant?</h2>
-        <p>By taking our short quiz, we can help guide you through the process.</p>
-        <a href="#" id="open-quiz-btn" class="btn">Take the Quiz</a>
-    </div>
-</section> -->
-
-<!-- Quiz Section -->
-<section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
-    <div class="container">
-        <div class="section-title">
-            <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
-            <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
-                Act:</p>
-        </div>
-
-        <!-- Quiz Container -->
-        <div class="quiz">
-            <div class="form-container">
-                <form class="usa-form">
-                    <!-- Form is dynamically created -->
-                </form>
-            </div>
-        </div>
-
-        <div class="results" style="display: none;">
-            <p class="tier-result">Your readiness level is: </p>
-            <div id="compliance-details"></div>
-            <br>
-            <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
-        </div>
-    </div>
-</section>
-
-<!-- Quiz Section -->
-<section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
-    <div class="container">
-        <div class="section-title">
-            <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
-            <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
-                Act:</p>
-        </div>
-
-        <!-- Quiz Container -->
-        <div class="quiz">
-            <div class="form-container">
-                <form class="usa-form">
-                    <!-- Form is dynamically created -->
-                </form>
-            </div>
-        </div>
-
-        <div class="results" style="display: none;">
-            <p class="tier-result">Your readiness level is: </p>
-            <div id="compliance-details"></div>
-            <br>
-            <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
-        </div>
-    </div>
-</section>
-</main>
-</body>
-
-<!-- CTA Section -->
-<!-- TODO: Fix quiz javascript file first -->
-<!-- <section class="cta" id="cta" aria-labelledby="cta-heading">
-    <div class="container">
-        <h2 id="cta-heading">Ready to be Compliant?</h2>
-        <p>By taking our short quiz, we can help guide you through the process.</p>
-        <a href="#" id="open-quiz-btn" class="btn">Take the Quiz</a>
-    </div>
-</section> -->
-
-<!-- Quiz Section -->
-<section class="documentation" id="quiz-section" style="display: none;" aria-labelledby="quiz-section-heading">
-    <div class="container">
-        <div class="section-title">
-            <h2 id="quiz-section-heading">What is my SHARE IT Act readiness level?</h2>
-            <p>Answer the series of questions below to determine your current readiness level with the SHARE IT
-                Act:</p>
-        </div>
-
-        <!-- Quiz Container -->
-        <div class="quiz">
-            <div class="form-container">
-                <form class="usa-form">
-                    <!-- Form is dynamically created -->
-                </form>
-            </div>
-        </div>
-
-        <div class="results" style="display: none;">
-            <p class="tier-result">Your readiness level is: </p>
-            <div id="compliance-details"></div>
-            <br>
-            <a href="#" class="doc-link" id="quiz-reset-btn">Try Again</a>
         </div>
     </div>
 </section>

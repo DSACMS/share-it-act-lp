@@ -1,7 +1,7 @@
 ---
 title: Exemptions
 description: List of exemptions for the SHARE IT Act and M-16-21
-permalink: /schema/exemptions
+permalink: /schema/exemptions/
 layout: layouts/page
 tags: shareit
 eleventyNavigation:
