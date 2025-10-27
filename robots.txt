@@ -1,4 +1,4 @@
-Sitemap: https://dsacms.github.io/ospo-guide/sitemap.xml
+Sitemap: https://dsacms.github.io/share-it-act-lp/sitemap.xml
 
 User-agent: usasearch
 Allow: /
