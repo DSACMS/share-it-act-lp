@@ -116,8 +116,13 @@ button:focus-visible,
   transition: background-color 0.3s;
 }
 
+.btn:visited {
+  color: $white;
+}
+
 .btn:hover {
   background-color: $cms-dark-red;
+  color: $white;
 }
 
 .btn-outline {
@@ -266,6 +271,10 @@ button:focus-visible,
 .doc-link:hover {
   color: $cms-bright-blue;
   text-decoration: underline;
+}
+
+.doc-link:visited {
+  color: $cms-blue;
 }
 
 .doc-link span {
@@ -428,86 +437,6 @@ button:focus-visible,
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 16px;
-}
-
-/* Call to Action */
-.cta {
-  background-color: $cms-blue;
-  color: $white;
-  padding: 80px 0;
-  text-align: center;
-  margin-bottom: 0;
-  scroll-margin-top: 100px;
-}
-
-.cta h2 {
-  font-size: 2.25rem;
-  margin-bottom: 20px;
-}
-
-.cta p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 30px;
-}
-
-/* Quiz  */
-.quiz {
-  padding-top: 20px;
-}
-
-@media (min-width: 30em) {
-  .usa-form {
-    max-width: 80rem !important;
-  }
-}
-
-.usa-legend {
-  max-width: 80rem !important;
-}
-
-.quiz .usa-form {
-  background-color: $white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.quiz .usa-checkbox__label {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-#quiz-section .results {
-  background-color: $white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  margin-top: 1rem;
-}
-
-#quiz-section .tier-result {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: $cms-blue;
-  margin-bottom: 1rem;
-}
-
-#compliance-details {
-  margin-top: 1.5rem;
-}
-
-#compliance-details p {
-  margin-bottom: 0.75rem;
-}
-
-#quiz-reset-btn {
-  margin-top: 1rem;
-  display: inline-block;
-}
-
-#quiz-section {
-  transition: opacity 0.3s ease;
 }
 
 @media (max-width: 768px) {
