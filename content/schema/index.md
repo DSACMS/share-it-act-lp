@@ -365,7 +365,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   </tbody>
 </table>
 
-Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
+Full schema can be found in [schema-2.0.0.json](https://github.com/DSACMS/gov-codejson/blob/main/schemas/schema-2.0.0.json).
 
 ### CMS code.json Fields
 
