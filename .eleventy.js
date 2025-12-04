@@ -41,8 +41,8 @@ module.exports = function (config) {
   // Place files for download in assets/{guide}/dist/{filename.ext}
   config.addPassthroughCopy("./assets/**/dist/*");
 
-  // Copy code.json schemas
-  config.addPassthroughCopy({ "./content/schema/gov/*.json": "./schema/gov/" });
+  // Copy schemas
+  config.addPassthroughCopy({ "./content/schema/gov/": "./schema/gov/" });
 
   // Add plugins
   config.addPlugin(pluginRss);
