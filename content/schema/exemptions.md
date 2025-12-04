@@ -7,7 +7,7 @@ tags: shareit
 eleventyNavigation:
   parent: shareit-schema
   key: shareit-schema-exemptions
-  order: 4
+  order: 5
   title: Exemptions
 sidenav: true
 sticky_sidenav: true
