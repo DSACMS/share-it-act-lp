@@ -365,7 +365,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   </tbody>
 </table>
 
-Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
+Full schema can be found in [schema-2.0.0.json](https://github.com/DSACMS/gov-codejson/blob/main/schemas/schema-2.0.0.json).
 
 ### CMS code.json Fields
 
@@ -393,7 +393,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>CMS fields</td>
       <td>Agency</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
     </tr>
     <tr>
     <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
@@ -525,7 +525,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>repositoryHost</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td>Location where source code is hosted</td>
       <td>
@@ -776,7 +776,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>repositoryType</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td>Purpose and functionality of the repository</td>
       <td>
@@ -793,7 +793,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>userInput</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>bool</td>
       <td>Does the software accept user input?</td>
       <td>
@@ -804,7 +804,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>fismaLevel</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td>Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
       <td>
@@ -816,7 +816,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>group</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td>Home Department / Org / Group associated with the project</td>
       <td></td>
@@ -824,7 +824,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>projects</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td>Project(s) that is associated or related to the repository, if any.</td>
       <td>Bluebutton, MPSM, codejson</td>
@@ -832,7 +832,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>systems</td>
       <td>optional</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td>CMS systems that the repository interfaces with or depends on, if any.</td>
       <td>IDR, PECOS</td>
@@ -840,7 +840,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>subsetInHealthcare</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td>Healthcare-related subset</td>
       <td>
@@ -853,7 +853,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>userType</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td>Types of users who interact with the software</td>
       <td>
@@ -865,7 +865,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
     <tr>
       <td>maturityModelTier</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>int</td>
       <td>Maturity model tier</td>
       <td>0, 1, 2, 3, 4</td>

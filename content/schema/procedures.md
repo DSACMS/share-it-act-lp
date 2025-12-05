@@ -17,18 +17,18 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 **Procedures for Project Teams**:
 
-[Creating a code.json file in your repository](#creating-a-codejson-file-in-your-repository)
+[Creating a code.json file in your repository](#creating-a-code-json-file-in-your-repository)
 - [code.json generator form site](#using-form-site)
 - [automated-codejson-generator GitHub Action](#using-automated-codejson-generator)
 - [repo-scaffolder](#using-repo-scaffolder)
 
 **Procedures for Agencies**:
 
-[Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
+[Generate an agency-index.json file for submission](#generate-an-agency-index-json-file-for-agencies)
 - [codejson-index-generator](#using-codejson-index-generator)
 
 [Tools created by other teams and agencies](#tools-created-by-other-teams-and-agencies)
-- [CMS CMCS](#cms-cmcs-codejson-aggregator)
+- [CMS CMCS](#cms-cmcs-code-json-aggregator)
 - [CDC](#cdc-share-it-act-repository-scanner-tool)
 
 
@@ -37,7 +37,7 @@ The CMS Open Source Program Office developed various tools that can automate det
 ### Using form site
 *This method works best for all repositories on all platforms.*
 
-Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-generator.
+Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: [https://dsacms.github.io/codejson-generator](https://dsacms.github.io/codejson-generator).
 
 
 ### Using automated-codejson-generator
