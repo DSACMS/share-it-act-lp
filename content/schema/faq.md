@@ -7,7 +7,7 @@ tags: shareit
 eleventyNavigation:
   parent: shareit-schema
   key: shareit-schema-faq
-  order: 5
+  order: 6
   title: FAQs
 sidenav: true
 sticky_sidenav: true
