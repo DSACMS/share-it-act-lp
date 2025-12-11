@@ -59,7 +59,11 @@
   },
   "tags": [
     "cms-ospo",
-    "share-it-act"
+    "share-it-act",
+    "inventory",
+    "metadata",
+    "codejson",
+    "featured"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
@@ -72,7 +76,7 @@
   "userInput": false,
   "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
-  "projects": [],
+  "projects": ["share-it-act"],
   "systems": [
     ""
   ],
