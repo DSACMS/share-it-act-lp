@@ -25,7 +25,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 5048,
+  "laborHours": 5405,
   "reuseFrequency": {
     "forks": 3,
     "clones": 0
@@ -54,16 +54,13 @@
   "partners": [],
   "date": {
     "created": "2025-04-08T14:25:37Z",
-    "lastModified": "2025-11-07T19:01:54Z",
-    "metadataLastUpdated": "2025-12-01T01:06:59.038Z"
+    "lastModified": "2025-12-12T19:26:06Z",
+    "metadataLastUpdated": "2026-02-01T01:21:51.915Z"
   },
   "tags": [
     "cms-ospo",
-    "share-it-act",
-    "inventory",
-    "metadata",
-    "codejson",
-    "featured"
+    "featured",
+    "share-it-act"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
@@ -76,7 +73,9 @@
   "userInput": false,
   "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
-  "projects": ["share-it-act"],
+  "projects": [
+    "share-it-act"
+  ],
   "systems": [
     ""
   ],
