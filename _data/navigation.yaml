@@ -20,6 +20,9 @@ shareit:
   - name: Inventory
     url: https://dsacms.github.io/code-gov/
 
+  - name: Savings
+    url: https://dsacms.github.io/share-it-savings/
+
   - name: About
     url: /about/
     children:
