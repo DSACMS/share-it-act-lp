@@ -15,9 +15,7 @@ sticky_sidenav: true
 
 ## [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih) Exemptions
 
-### Sign off on risk acceptance of open-sourcing the software product
-
-Before outbounding repositories, it’s important that the appropriate stakeholders review and acknowledge the risks and responsibilities associated with releasing the code to the public. This step ensures transparency and accountability while enabling informed decision making.
+The SHARE IT Act lists specific automatic and discretionary exemption guidance that applies under certain circumstances, as follows:
 
 #### Security and Privacy Verification
 - [ ] I acknowledge that this project does **NOT**:
