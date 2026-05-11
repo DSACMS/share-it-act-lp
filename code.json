@@ -60,7 +60,10 @@
   "tags": [
     "cms-ospo",
     "featured",
-    "share-it-act"
+    "share-it-act",
+    "inventory",
+    "metadata",
+    "codejson"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
