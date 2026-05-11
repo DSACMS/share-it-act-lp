@@ -22,8 +22,6 @@ Before outbounding repositories, it’s important that the appropriate stakehold
 #### Security and Privacy Verification
 - [ ] I acknowledge that this project does **NOT**:
   - [ ] contain any PII/PHI, or create an identifiable risk to the privacy of an individual.
-  - [ ] interface with any CMS Internal Systems. 
-  - [ ] contain any keys or credentials to authenticate with CMS systems.
 
 #### National Security and Intelligence Verification
 - [ ] I acknowledge that this project is **NOT**:
