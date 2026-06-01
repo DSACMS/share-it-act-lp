@@ -1,6 +1,6 @@
 ---
 title: About
-description: 'About'
+description: Learn more about the SHARE IT Act
 permalink: /about/
 layout: layouts/page
 tags: shareit

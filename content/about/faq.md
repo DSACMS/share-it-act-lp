@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions (FAQs)
-description: 'Frequently Asked Questions'
+description: Frequently Asked Questions
 permalink: /about/FAQ/
 layout: layouts/page
 tags: shareit
