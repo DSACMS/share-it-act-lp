@@ -1,6 +1,6 @@
 ---
 title: agency-index.json
-description: Tools to create and update metadata in repositories
+description: Tools and resources to create an agency index / software inventory
 permalink: /schema/agency-index/
 layout: layouts/page
 tags: shareit
