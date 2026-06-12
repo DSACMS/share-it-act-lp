@@ -50,7 +50,7 @@ to modify some of the meta-data for the site, this is the place to do it.
   {% endif %}
 
   <meta property="og:type" content="article" />
-  <link rel="canonical" href="{{ page.url }}" />
+  <link rel="canonical" href="{{ page.url | url }}" />
   <meta property="og:url" content="{{ page.url }}" />
   <script async="" src={{ "/assets/js/uswds-init.js" | url }}></script>
 
