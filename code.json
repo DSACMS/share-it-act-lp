@@ -25,7 +25,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 5433,
+  "laborHours": 5431,
   "reuseFrequency": {
     "forks": 4,
     "clones": 0
@@ -54,8 +54,8 @@
   "partners": [],
   "date": {
     "created": "2025-04-08T14:25:37Z",
-    "lastModified": "2026-05-19T17:05:48Z",
-    "metadataLastUpdated": "2026-06-01T02:41:22.060Z"
+    "lastModified": "2026-06-12T17:38:11Z",
+    "metadataLastUpdated": "2026-09-01T02:36:28.274Z"
   },
   "tags": [
     "cms-ospo",
