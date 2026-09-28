@@ -25,7 +25,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 5431,
+  "laborHours": 5442,
   "reuseFrequency": {
     "forks": 4,
     "clones": 0
@@ -50,12 +50,17 @@
   "contractNumber": [],
   "SBOM": "https://github.com/DSACMS/share-it-act-lp/network/dependencies",
   "relatedCode": [],
-  "reusedCode": [],
+  "reusedCode": [
+    {
+      "name": "U.S. Web Design System (USWDS)",
+      "URL": "https://github.com/uswds/uswds"
+    }
+  ],
   "partners": [],
   "date": {
     "created": "2025-04-08T14:25:37Z",
-    "lastModified": "2026-06-12T17:38:11Z",
-    "metadataLastUpdated": "2026-09-01T02:36:28.274Z"
+    "lastModified": "2026-09-28T19:48:31Z",
+    "metadataLastUpdated": "2026-09-28T19:53:23.546Z"
   },
   "tags": [
     "cms-ospo",
