@@ -52,7 +52,9 @@ There are [4 exemptions](https://www.congress.gov/bill/118th-congress/house-bill
 Yes. All custom-developed code—whether it involves software applications, data analysis, infrastructure/devops, interoperability, or internal tools/scripts—must reside in a repository, unless it qualifies for one of the [four exemptions](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909).
 
 ### When do agencies have to comply?
+
 The SHARE IT Act applies to custom-developed code created on or after July 21, 2025 where agencies must:
+
 - store custom-developed code in a repository
 - ensure code is accessible to federal employees and is owned by the agency
 - publish metadata on all custom-developed code
@@ -77,6 +79,39 @@ Yes. As per M-16-21, agencies are required to publish metadata on all custom-dev
 
 As per the SHARE IT Act, agencies are required to publish metadata on all custom-developed code after July 22, 2025, which is not subject to exemptions (see: [SHARE IT ACT exemptions](https://www.congress.gov/118/plaws/publ187/PLAW-118publ187.pdf)).
 
+### Is there a way to automate filling out the code.json file or do I have to manually do the work?
+
+Our tools offer various ways to automate code.json data population:
+
+1. [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator)
+
+This GitHub Action populates 21 code.json fields using the GitHub API:
+
+- `name`
+- `version`
+- `description`
+- `status`
+- `license.name`, `license.URL`
+- `organization`
+- `repositoryURL`
+- `repositoryVisibility`
+- `homepageURL`
+- `vcs`
+- `reuseFrequency.forks`
+- `reuseFrequency.clones`
+- `languages`
+- `SBOM`
+- `date.created`, `date.lastModified`, `date.metadataLastUpdated`
+- `tags`
+- `contact.email`
+- `feedbackMechanism`
+
+2. [codejson-generator Form Site](https://dsacms.github.io/codejson-generator/)
+
+In step 2 of the form, click the `Enhance with AI` button to use a LLM to populate the rest of the code.json fields based on scanning the contents of the repository. Be sure to review each value for correctness and accuracy before generating your code.json file.
+
+Visit the [Procedures page](https://dsacms.github.io/share-it-act-lp/schema/procedures/#using-form-site) and [Metadata page](https://dsacms.github.io/share-it-act-lp/schema) for more information on the automation options above.
+
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
 We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
@@ -84,6 +119,10 @@ We are open to adding more fields to CMS code.json for any metadata the agency s
 ### My agency extended the code.json schema to add more metadata fields. Where can I share this?
 
 We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](https://github.com/DSACMS/gov-codejson/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+
+### Which code.json fields does automated-codejson-generator populate through the GitHub API?
+
+The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) GitHub Action uses the GitHub API to automatically populate the following `code.json` fields:
 
 ### Does `laborHours` need to be down-to-the-minute accurate?
 
