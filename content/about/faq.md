@@ -120,10 +120,6 @@ We are open to adding more fields to CMS code.json for any metadata the agency s
 
 We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](https://github.com/DSACMS/gov-codejson/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
-### Which code.json fields does automated-codejson-generator populate through the GitHub API?
-
-The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) GitHub Action uses the GitHub API to automatically populate the following `code.json` fields:
-
 ### Does `laborHours` need to be down-to-the-minute accurate?
 
 The goal is to be as accurate as we can, and with as little burden as possible. We strive to automate labor hour calculations for public repositories whenever possible (using the [scc](https://github.com/boyter/scc) tool), but manual ballpark estimates are acceptable when precise calculation isn't feasible.
