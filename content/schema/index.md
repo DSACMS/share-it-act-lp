@@ -97,6 +97,15 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
+      <td>identifier</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>str</td>
+      <td></td>
+      <td>Persistent unique ID; tracks assets across renames/migrations</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>version</td>
       <td>optional</td>
       <td>🇺🇸</td>
@@ -107,12 +116,21 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>description</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>✅</td>
       <td>A one or two sentence description of the software.</td>
       <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>✅</td>
+      <td>The organization or component within the agency to which the releases listed belong.</td>
+      <td>Centers for Medicare & Medicaid Services, 18F, Navy</td>
     </tr>
     <tr>
       <td>status</td>
@@ -133,7 +151,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>permissions/license/url <br> permissions/license/name</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
       <td>✅</td>
@@ -149,7 +167,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td>🇺🇸📜</td>
       <td>str</td>
       <td></td>
-      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByDisposableCode: The source code is disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained; (12) exemptByExperimentalCode: The source code is solely exploratory in nature, including source code written by a developer experimenting with a new language or library, and is not intended for production or public reuse; (13) exemptByCommercialSoftware: The source code is commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software
       </td>
       <td>
         - openSource<br>
@@ -162,16 +180,14 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
         - exemptByTSA<br>
         - exemptByClassifiedInformation<br>
         - exemptByPrivacyRisk<br>
-        - exemptByIPRestriction<br>
-        - exemptByAgencySystem<br>
-        - exemptByAgencyMission<br>
-        - exemptByCIO<br>
-        - exemptByPolicyDate
+        - exemptByDisposableCode<br>
+        - exemptByExperimentalCode<br>
+        - exemptByCommercialSoftware<br>
       </td>
     </tr>
     <tr>
       <td>permissions/exemptionText</td>
-      <td>optional</td>
+      <td>conditional (only if exempted)</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td></td>
@@ -179,13 +195,13 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>organization</td>
+      <td>reuseFrequency/forks <br> reuseFrequency/clones<br> reuseFrequency/downloads</td>
       <td>required</td>
-      <td>🇺🇸</td>
-      <td>str</td>
+      <td>📜</td>
+      <td>obj</td>
       <td>✅</td>
-      <td>The organization or component within the agency to which the releases listed belong.</td>
-      <td>Centers for Medicare & Medicaid Services, 18F, Navy</td>
+      <td>Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software</td>
+      <td></td>
     </tr>
     <tr>
       <td>repositoryURL</td>
@@ -246,7 +262,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>vcs</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>✅</td>
@@ -261,7 +277,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>laborHours</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>int</td>
       <td></td>
@@ -269,17 +285,8 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/clones</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>obj</td>
-      <td>✅</td>
-      <td>Measures frequency of code reuse in various forms</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>languages</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
       <td>✅</td>
@@ -311,7 +318,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>SBOM</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>✅</td>
@@ -353,7 +360,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>date/created <br> date/lastModified date/metadataLastUpdated</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
       <td>✅</td>
@@ -362,7 +369,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>tags</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
       <td>✅</td>
@@ -391,7 +398,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
     </tr>
     <tr>
       <td>AIUseCaseID</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🌐</td>
       <td>str</td>
       <td></td>
@@ -402,7 +409,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
   </tbody>
 </table>
 
-Full schema can be found in [schema-2.0.0.json](https://github.com/DSACMS/gov-codejson/blob/main/schemas/schema-2.0.0.json).
+Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json).
 
 ### CMS code.json Fields
 
@@ -465,6 +472,15 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
+      <td>identifier</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>str</td>
+      <td></td>
+      <td>Persistent unique ID; tracks assets across renames/migrations</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>version</td>
       <td>optional</td>
       <td>🇺🇸</td>
@@ -490,6 +506,15 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
       <td>Provide longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user.</td>
       <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>✅</td>
+      <td>The organization or component within the agency to which the releases listed belong.</td>
+      <td>Centers for Medicare & Medicaid Services</td>
     </tr>
     <tr>
       <td>status</td>
@@ -526,7 +551,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td>🇺🇸📜</td>
       <td>str</td>
       <td></td>
-      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"</td>
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByDisposableCode: The source code is disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained (e.g., a throwaway script or one-off utility); (12) exemptByExperimentalCode: The source code is solely exploratory in nature, including source code written by a developer experimenting with a new language or library, and is not intended for production or public reuse; (13) exemptByCommercialSoftware: The source code is commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software</td>
       <td>
         - openSource<br>
         - governmentWideReuse<br>
@@ -538,16 +563,14 @@ A checkmark (✅) in the Automated column indicates a field populated through th
         - exemptByTSA<br>
         - exemptByClassifiedInformation<br>
         - exemptByPrivacyRisk<br>
-        - exemptByIPRestriction<br>
-        - exemptByAgencySystem<br>
-        - exemptByAgencyMission<br>
-        - exemptByCIO<br>
-        - exemptByPolicyDate
+        - exemptByDisposableCode<br>
+        - exemptByExperimentalCode<br>
+        - exemptByCommercialSoftware<br>
       </td>
     </tr>
     <tr>
       <td>permissions/exemptionText</td>
-      <td>optional</td>
+      <td>conditional (only if exempted)</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td></td>
@@ -555,13 +578,13 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>organization</td>
+      <td>reuseFrequency/forks <br> reuseFrequency/clones <br> reuseFrequency/downloads</td>
       <td>required</td>
-      <td>🇺🇸</td>
-      <td>str</td>
+      <td>📜</td>
+      <td>obj</td>
       <td>✅</td>
-      <td>The organization or component within the agency to which the releases listed belong.</td>
-      <td>Centers for Medicare & Medicaid Services</td>
+      <td>Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software</td>
+      <td></td>
     </tr>
     <tr>
       <td>repositoryURL</td>
@@ -658,15 +681,6 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td>int</td>
       <td></td>
       <td>Labor hours invested in the project. Calculated through <a href="https://github.com/boyter/scc">COCOMO & SCC tool</a></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/clones</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>obj</td>
-      <td>✅</td>
-      <td>Measures frequency of code reuse in various forms</td>
       <td></td>
     </tr>
     <tr>
@@ -957,10 +971,10 @@ A checkmark (✅) in the Automated column indicates a field populated through th
   </tbody>
 </table>
 
-Full schema can be found in the [gov-codejson repository](https://github.com/DSACMS/gov-codejson/blob/main/schemas/cms/schema-2.0.0.json).
+Full schema can be found in the [codejson-schemas repository](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/cms/schema-2.2.0.json).
 
-Examples of code.json files can be found here: [https://github.com/DSACMS/gov-codejson/blob/main/docs/examples.md](https://github.com/DSACMS/gov-codejson/blob/main/docs/examples.md)
+Examples of code.json files can be found here: [https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/docs/examples.md](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/docs/examples.md)
 
 ### Adding new metadata fields
 
-For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
