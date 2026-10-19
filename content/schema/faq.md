@@ -144,4 +144,4 @@ Yes, the Repository Discovery form is a way for the agency to collect and compil
 Yes! code.json is designed to be extensible where additionalProperties can be added to the schema. Fields to support additional needs include:
 
 - `AIUseCaseID` is the software's ID in the AI Use Case Inventory as part of M-25-21 compliance.
-- `SBOM` is a link to the softare's SBOM as part of EO14028.
+- `SBOM` is a link to the software's SBOM as part of EO14028.
