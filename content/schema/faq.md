@@ -45,6 +45,8 @@ There are [4 exemptions](https://www.congress.gov/bill/118th-congress/house-bill
 3. Source code that is exempted from the Freedom of Information Act
 4. Source code exempted by the agency’s CIO
 
+Additionally, the SHARE IT Act does not include source code that is solely exploratory or disposable in nature, including source code written by a developer experimenting with a new language or library as well as commercial computer software, commercial off-the-shelf software, or configuration scripts for such software.
+
 ### Does SHARE IT Act apply to data analysis code?
 
 Yes. All custom-developed code—whether it involves software applications, data analysis, infrastructure/devops, interoperability, or internal tools/scripts—must reside in a repository, unless it qualifies for one of the [four exemptions](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909).
@@ -110,6 +112,11 @@ In step 2 of the form, click the `Enhance with AI` button to use a LLM to popula
 
 Visit the [Procedures page](https://dsacms.github.io/share-it-act-lp/schema/procedures/#using-form-site) and [Metadata page](https://dsacms.github.io/share-it-act-lp/schema) for more information on the automation options above.
 
+### Which metadata fields require human judgment, and who should be responsible for completing them?
+
+- `contractNumber` is a required field that links the software with its corresponding contract. The Contracting Officer Representative (COR) of the project should have this information
+- Fields describing repository contents such as `description`, `status`, `languages`, and `tags` should be handled by development team.
+
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
 We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
@@ -121,3 +128,20 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
 ### Does `laborHours` need to be down-to-the-minute accurate?
 
 The goal is to be as accurate as we can, and with as little burden as possible. We strive to automate labor hour calculations for public repositories whenever possible (using the [scc](https://github.com/boyter/scc) tool), but manual ballpark estimates are acceptable when precise calculation isn't feasible.
+
+## SHARE IT Act Compliance & Implementation
+
+### Where should an agency begin if it does not yet have a complete inventory of its repositories?
+
+We recommend an agency use the Repository Discovery form as a starting point to collect source code repository information across the organization. It is an intake form that serves as a simple registry for gathering basic information about a source code repository. Responses can be used by the agency to coordinate with repository managers and owners to comply with the SHARE IT Act.
+
+### Can an agency build a shared software inventory across GitHub, GitLab, Azure DevOps, and other version control systems?
+
+Yes, the Repository Discovery form is a way for the agency to collect and compile various source code hosting platforms used throughout the organization.
+
+### Can the software inventory support additional agency needs, such as identifying AI use cases?
+
+Yes! code.json is designed to be extensible where additionalProperties can be added to the schema. Fields to support additional needs include:
+
+- `AIUseCaseID` is the software's ID in the AI Use Case Inventory as part of M-25-21 compliance.
+- `SBOM` is a link to the software's SBOM as part of EO14028.
