@@ -1,10 +1,10 @@
-# **DRAFT SHARE IT Act Outbound Review Checklist**
+# DRAFT SHARE IT Act Outbound Review Checklist
 
 _2026-09-01 Version 0.1_
 
 _A source code repository release readiness checklist for federal agencies, aligned with OMB M-16-21, M-25-21, and the SHARE IT Act of 2024\._
 
-## **Part 1: Pre-Development Reuse Analysis**
+## Part 1: Pre-Development Reuse Analysis
 
 - [ ] Searched the government-wide repository for existing similar solutions
 - [ ] Reviewed the agency's internal inventory for reusable components
@@ -12,7 +12,7 @@ _A source code repository release readiness checklist for federal agencies, alig
 - [ ] Documented the alternatives analysis findings
 - [ ] Obtained CIO (or designee) review of the reuse analysis before custom development began
 
-## **Part 2: Source Code Hosting Setup**
+## Part 2: Source Code Hosting Setup
 
 - [ ] Code has been maintained in a version-controlled repository from project start
 - [ ] Repository includes a README, setup instructions, and architecture diagrams
@@ -21,7 +21,7 @@ _A source code repository release readiness checklist for federal agencies, alig
 - [ ] Licensing terms are clearly documented
 - [ ] Project is published to the agency-designated repository for cross-component/agency sharing
 
-## **Part 3: Benefits and Risk Assessment**
+## Part 3: Benefits and Risk Assessment
 
 **Benefits assessed:**
 
@@ -39,7 +39,7 @@ _A source code repository release readiness checklist for federal agencies, alig
 - [ ] Financial risks (maintenance, community engagement, infrastructure) reviewed
 - [ ] Privacy risks (PII/PHI exposure) reviewed
 
-## **Part 4: Sensitivity Screening**
+## Part 4: Sensitivity Screening
 
 Answer the following before proceeding. A "yes" to any question means the project may be sensitive and needs a deeper review before public release.
 
@@ -49,7 +49,7 @@ Answer the following before proceeding. A "yes" to any question means the projec
 
 _If any answer is "yes," escalate to your agency's open source/legal/security point of contact before continuing._
 
-## **Part 5: Code Review**
+## Part 5: Code Review
 
 - [ ] Codebase reviewed top-to-bottom by two or more engineers who have written production code in the relevant languages within the past two years
 - [ ] Reviewers assessed credential management practices (no keys/passwords in source or git history)
@@ -57,7 +57,7 @@ _If any answer is "yes," escalate to your agency's open source/legal/security po
 - [ ] Reviewers referenced a current vulnerability framework (e.g., OWASP Top 10\)
 - [ ] Reviewer names, organizations, comments, and approval/disapproval are documented
 
-## **Part 6: Code Analysis and Security Scanning**
+## Part 6: Code Analysis and Security Scanning
 
 - [ ] Static/dynamic code analysis performed
 - [ ] Secret and key scanning performed
@@ -68,14 +68,14 @@ _If any answer is "yes," escalate to your agency's open source/legal/security po
 
 _Suggested (non-exhaustive) tool categories: repository linters, secret/key scanners, git history-cleaning tools, and vulnerability/CVE scanners. Agencies may substitute tools that meet the same function._
 
-## **Part 7: Licensing Review**
+## Part 7: Licensing Review
 
 - [ ] All components have licenses permitting reuse
 - [ ] Third-party components and their licenses are documented
 - [ ] Licensing constraints are flagged in the agency inventory
 - [ ] A project license has been selected (public-domain dedication or an OSI-approved open source license) and included in a LICENSE file
 
-## **Part 8: Repository Hygiene — Required Files**
+## Part 8: Repository Hygiene — Required Files
 
 - [ ] LICENSE
 - [ ] README.md (project description, setup instructions, core team, applicable policy links)
@@ -84,17 +84,17 @@ _Suggested (non-exhaustive) tool categories: repository linters, secret/key scan
 - [ ] SECURITY.md (security policies and vulnerability-reporting procedures)
 - [ ] code.json (machine-readable project metadata)
 
-## **Part 9: Repository Metadata**
+## Part 9: Repository Metadata
 
 - [ ] code.json created and kept up to date
 
-## **Part 10: Source Code Inventory Management**
+## Part 10: Source Code Inventory Management
 
 - [ ] Entry created/updated in the agency's machine-readable software inventory (system name, repository location, licensing terms, reuse status, security classification, last-updated date)
 - [ ] Inventory updated on a regular schedule (quarterly recommended)
 - [ ] Inventory linked to enterprise architecture and modernization roadmap documentation
 
-## **Part 11: Acquisition Integration (for contractor-developed code)**
+## Part 11: Acquisition Integration (for contractor-developed code)
 
 - [ ] Contract required delivery of source code, documentation, and metadata
 - [ ] Contract secured at minimum government-wide reuse rights
@@ -102,9 +102,9 @@ _Suggested (non-exhaustive) tool categories: repository linters, secret/key scan
 - [ ] Contract required security scanning and licensing verification
 - [ ] Vendor compliance with these requirements was evaluated during performance reviews
 
-## **Part 12: Exemption Review**
+## Part 12: Exemption Review
 
-### **SHARE IT Act Exemptions**
+### SHARE IT Act Exemptions
 
 **Security and Privacy**
 
@@ -131,7 +131,7 @@ _Suggested (non-exhaustive) tool categories: repository linters, secret/key scan
 
 - [ ] The source code is NOT commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software
 
-### **M-16-21 Exemptions**
+### M-16-21 Exemptions
 
 **Legal Restrictions**
 
@@ -143,7 +143,7 @@ _Suggested (non-exhaustive) tool categories: repository linters, secret/key scan
 - [ ] Sharing would **NOT** create risk to agency mission, programs, or operations
 - [ ] Release is **NOT** deemed by the agency CIO to require a national-interest exemption
 
-**M-25-21 Exemptions (for AI Code and Models)**
+### M-25-21 Exemptions (for AI Code and Models)
 
 Agencies must also prioritize sharing AI code, models, and data government-wide, consistent with the [Open, Public, Electronic and Necessary (OPEN) Government Data Act](https://www.congress.gov/bill/115th-congress/house-bill/4174/text/eas#toc-HD4E1EFAE6EE64575A09DA8B3E2DAF936). Agencies, where practicable, must also release and maintain AI code [as open source software in public repository](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf), unless the:
 
@@ -154,7 +154,7 @@ Agencies must also prioritize sharing AI code, models, and data government-wide,
 
 _If all boxes above are checked, proceed to Part 13\. If not, this section must be completed and approved by the appropriate stakeholders before public release._
 
-## **Part 13: Sign-Off and Governance Approval**
+## Part 13: Sign-Off and Governance Approval
 
 - [ ] Code reviewer(s) recommendation recorded
 - [ ] Information System Security Officer (or equivalent) approval obtained
@@ -169,7 +169,7 @@ _If all boxes above are checked, proceed to Part 13\. If not, this section must 
 | Governance/Technical Approval         |               | Approved / Needs Approval |
 | Business Owner(s)                     |               | Approved / Needs Approval |
 
-## **Part 14: Post-release Actions ("Flip the Switch")**
+## Part 14: Post-release Actions ("Flip the Switch")
 
 - [ ] Repository "About" section includes a description, website link, and discoverability tags/topics
 - [ ] Releases, packages, and deployments sections enabled where applicable
@@ -179,7 +179,7 @@ _If all boxes above are checked, proceed to Part 13\. If not, this section must 
 - [ ] Git branching strategy documented
 - [ ] (Optional) Developer Certificate of Origin (DCO) enforced
 
-## **Part 15: Governance and Continuous Oversight**
+## Part 15: Governance and Continuous Oversight
 
 - [ ] Agency SHARE IT working group established (CIO staff, acquisition officials, security teams, Chief Data Officer, development leads, repository administrators)
 - [ ] Periodic reviews scheduled (repository submissions, inventory completeness, reuse certifications, exemption decisions, vendor compliance)
