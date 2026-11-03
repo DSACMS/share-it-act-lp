@@ -179,6 +179,16 @@ Title band, sidenav, and prose styles that match the homepage.
     color: var(--heading);
     font-weight: 600;
   }
+
+  .schema-required {
+    color: #b50909;
+  }
+
+  .schema-optional {
+    font-size: .8125em;
+    font-weight: 400;
+    white-space: nowrap;
+  }
 }
 
 // Stack each row into a card: the first cell is the title, the rest are
