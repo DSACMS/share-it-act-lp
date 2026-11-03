@@ -26,9 +26,17 @@ Before outbounding repositories, it’s important that the appropriate stakehold
   - [ ] Regulations of the Transportation Security Administration related to the protection of sensitive information.
   - [ ] Federal laws and regulations governing the sharing of classified information.
 
+#### Export and Regulatory Compliance
+
+- [ ] I acknowledge that this project is **NOT** prohibited under:
+  - [ ] Export Administration Regulations.
+  - [ ] International Traffic in Arms Regulations (ITAR).
+  - [ ] Regulations of the Transportation Security Administration related to the protection of sensitive information.
+  - [ ] Federal laws and regulations governing the sharing of classified information.
+
 #### Disposable, Experimental and Commercial Software
 
-- [ ] I acknowledge that the source is **NOT**:
+- [ ] I acknowledge that the source code is **NOT**:
   - [ ] disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained
   - [ ] solely exploratory in nature, including source code written by a developer experimenting with a new language or library
   - [ ] commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software

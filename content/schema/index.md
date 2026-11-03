@@ -6,17 +6,17 @@
 
 By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but also on a national and international level.
 
-The generic code.json schema can be found in the [gov-codejson repository](https://github.com/DSACMS/gov-codejson/blob/main/schemas/schema-2.0.0.json).
+The generic code.json schema can be found in the [`schemas` directory](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json).
 
-### Extending the schema for agency use
+## Extending the schema for agency use
 
-The generic schema is designed to be extensible, allowing agencies to add metadata fields that are relevant to their specific needs.
+The generic schema is designed to be extensible, allowing agencies to add metadata fields that are relevant to their specific software inventorying needs.
 
-For example, CMS has their [own schema](https://github.com/DSACMS/gov-codejson/tree/main/schemas/cms) that includes new fields such as FISMA level, subset in healthcare, and systems.
+For example, CMS has their [own schema](https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas/cms) that includes new fields such as FISMA level, subset in healthcare, and systems.
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](https://github.com/DSACMS/gov-codejson/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
-### code.json Fields
+## code.json Fields
 
 **Legend**
 
@@ -396,7 +396,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
 
 Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json).
 
-### CMS code.json Fields
+## CMS code.json Fields
 
 **Legend**
 
@@ -422,7 +422,7 @@ Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/
     <tr>
       <td>CMS fields</td>
       <td>Agency</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
     </tr>
     <tr>
     <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
@@ -956,10 +956,8 @@ A checkmark (✅) in the Automated column indicates a field populated through th
   </tbody>
 </table>
 
-Full schema can be found in the [codejson-schemas repository](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/cms/schema-2.2.0.json).
+Full schema can be found in [schema-2.2.0.json](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/cms/schema-2.2.0.json).
 
-Examples of code.json files can be found here: [https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/docs/examples.md](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/docs/examples.md)
-
-### Adding new metadata fields
+## Adding new metadata fields
 
 For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).

@@ -68,7 +68,7 @@ As per the SHARE IT Act, agencies are required to publish metadata on all custom
 
 Our tools offer various ways to automate code.json data population:
 
-1. [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator)
+1. [codejson-action](https://github.com/GSA-SHARE-IT/codejson-action)
 
 This GitHub Action populates 21 code.json fields using the GitHub API:
 
@@ -91,11 +91,11 @@ This GitHub Action populates 21 code.json fields using the GitHub API:
 - `contact.email`
 - `feedbackMechanism`
 
-2. [codejson-generator Form Site](https://dsacms.github.io/codejson-generator/)
+2. [codejson-form](https://gsa-share-it.github.io/codejson-form/)
 
 In step 2 of the form, click the `Enhance with AI` button to use a LLM to populate the rest of the code.json fields based on scanning the contents of the repository. Be sure to review each value for correctness and accuracy before generating your code.json file.
 
-Visit the [Procedures page](https://gsa-share-it.github.io/site/schema/procedures/#using-form-site) and [Metadata page](https://gsa-share-it.github.io/site/schema) for more information on the automation options above.
+Visit the [Procedures page](https://gsa-share-it.github.io/site/schema/procedures/#using-codejson-form) and [Metadata page](https://gsa-share-it.github.io/site/schema) for more information on the automation options above.
 
 ### Which metadata fields require human judgment, and who should be responsible for completing them?
 
@@ -104,11 +104,11 @@ Visit the [Procedures page](https://gsa-share-it.github.io/site/schema/procedure
 
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
-We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
 
 ### My agency extended the code.json schema to add more metadata fields. Where can I share this?
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](https://github.com/DSACMS/gov-codejson/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### Does `laborHours` need to be down-to-the-minute accurate?
 
