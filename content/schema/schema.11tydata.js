@@ -12,7 +12,7 @@ const PAGE_META = {
   },
   faq: {
     title: 'Frequently Asked Questions (FAQs)',
-    description: 'Frequently Asked Questions',
+    description: 'Frequently Asked Questions on the federal software metadata schemas',
     permalink: '/schema/faq/',
     eleventyNavigation: {
       parent: 'shareit-schema',
