@@ -15,6 +15,5 @@ sticky_sidenav: true
 
 ### About the SHARE IT Act
 
-- **[Frequently Asked Questions (FAQs)](/about/FAQ/)** - Common questions and answers about our software policies and practices.
-- **[Glossary](/about/glossary/)** - Definitions for frequently used words and phrases.
-
+- **[Frequently Asked Questions (FAQs)](https://gsa-share-it.github.io/site/about/faq/)** - Common questions and answers about our software policies and practices.
+- **[Glossary](https://gsa-share-it.github.io/site/about/glossary/)** - Definitions for frequently used words and phrases.
