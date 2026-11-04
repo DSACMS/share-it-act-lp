@@ -18,12 +18,12 @@ const PAGE_META = {
       parent: 'shareit-schema',
       key: 'shareit-schema-faq',
       order: 6,
-      title: 'FAQs',
+      title: 'Schema FAQs',
     },
   },
   exemptions: {
     title: 'Exemptions',
-    description: 'List of exemptions for the SHARE IT Act and M-16-21',
+    description: 'List of exemptions for the SHARE IT Act',
     permalink: '/schema/exemptions/',
     eleventyNavigation: {
       parent: 'shareit-schema',
