@@ -24,6 +24,6 @@ shareit:
     url: /about/
     children:
       - name: FAQ
-        url: /about/FAQ/
+        url: /about/faq/
       - name: Glossary
         url: /about/glossary/

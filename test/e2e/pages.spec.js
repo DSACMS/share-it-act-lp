@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 const PAGES = [
   '/',
   '/about/',
-  '/about/FAQ/',
+  '/about/faq/',
   '/about/glossary/',
   '/schema/',
   '/schema/agency-index/',
