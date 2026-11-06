@@ -57,7 +57,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   </tbody>
 </table>
 
-A checkmark (✅) in the _Automated_ column indicates a field populated through the GitHub API by [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator).
+A checkmark (✅) in the _Automated_ column indicates a field populated through the GitHub API by [codejson-action](https://github.com/GSA-SHARE-IT/codejson-action).
 
 <table>
   <thead>
@@ -422,7 +422,7 @@ Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/
     <tr>
       <td>CMS fields</td>
       <td>Agency</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
     </tr>
     <tr>
     <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
@@ -432,7 +432,7 @@ Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/
   </tbody>
 </table>
 
-A checkmark (✅) in the Automated column indicates a field populated through the GitHub API by [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator). Blank cells indicate fields outside that automation.
+A checkmark (✅) in the _Automated_ column indicates a field populated through the GitHub API by [codejson-action](https://github.com/GSA-SHARE-IT/codejson-action).
 
 <table>
   <thead>
@@ -583,7 +583,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>repositoryHost <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
       <td></td>
       <td>Location where source code is hosted</td>
@@ -850,7 +850,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>repositoryType <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
       <td></td>
       <td>Purpose and functionality of the repository</td>
@@ -868,7 +868,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>userInput <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>bool</td>
       <td></td>
       <td>Does the software accept user input?</td>
@@ -880,7 +880,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>fismaLevel <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
       <td></td>
       <td>Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
@@ -893,7 +893,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>group <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
       <td></td>
       <td>Home Department / Org / Group associated with the project</td>
@@ -902,7 +902,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>projects <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
       <td></td>
       <td>Project(s) that is associated or related to the repository, if any.</td>
@@ -911,7 +911,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td>systems <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
       <td></td>
       <td>CMS systems that the repository interfaces with or depends on, if any.</td>
@@ -920,7 +920,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>subsetInHealthcare <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
       <td></td>
       <td>Healthcare-related subset</td>
@@ -934,7 +934,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>userType <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
       <td></td>
       <td>Types of users who interact with the software</td>
@@ -947,7 +947,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
     <tr>
       <td><strong>maturityModelTier <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
+      <td><img src="../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>int</td>
       <td></td>
       <td>Maturity model tier</td>
