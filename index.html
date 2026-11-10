@@ -297,18 +297,7 @@ eleventyExcludeFromCollections: true
     <div class="tool-grid">
       <article class="tool" aria-labelledby="repository-discovery-form">
         <div class="tool-meta"><span class="badge">Webform</span></div>
-        <div class="survey-mock" aria-hidden="true">
-          <div class="survey-head">
-            <span>Question 3 of 8</span>
-            <span class="survey-steps"><i class="done"></i><i class="done"></i><i class="current"></i><i></i><i></i><i></i><i></i><i></i></span>
-          </div>
-          <p class="survey-q">What is the development status of the project?</p>
-          <div class="survey-options">
-            <div class="opt is-picked"><span class="radio"></span><span><strong>Development</strong></span></div>
-            <div class="opt"><span class="radio"></span><span><strong>Production</strong></span></div>
-          </div>
-          <div class="survey-foot"><span class="survey-back">Back</span><span class="survey-next">Next</span></div>
-        </div>
+        {% include 'tool-preview.html', shots: previews["repo-discovery-form"], label: "Repository Discovery Form" %}
         <div class="tool-copy">
           <h3 class="display" id="repository-discovery-form">Repository Discovery Form</h3>
           <p>Static web form for collecting source code repository information.</p>
@@ -320,12 +309,7 @@ eleventyExcludeFromCollections: true
 
       <article class="tool" aria-labelledby="web-form-generator">
         <div class="tool-meta"><span class="badge">Webform</span></div>
-        <div class="form-mock" aria-hidden="true">
-          <div><div class="field-label">Project name</div><div class="field">site</div></div>
-          <div><div class="field-label">Organization</div><div class="field">General Services Administration</div></div>
-          <div><div class="field-label">Repository visibility</div><div class="seg"><span>Public</span><span>Private</span></div></div>
-          <div class="fake-btn">Download code.json</div>
-        </div>
+        {% include 'tool-preview.html', shots: previews["web-form-generator"], label: "Web Form Generator" %}
         <div class="tool-copy">
           <h3 class="display" id="web-form-generator">Web Form Generator</h3>
           <p>A step-by-step interactive web form for creating, generating, and downloading a valid code.json file.</p>
@@ -354,9 +338,7 @@ eleventyExcludeFromCollections: true
 
       <article class="tool" aria-labelledby="index-generator">
         <div class="tool-meta"><span class="badge">Webform</span></div>
-<pre class="terminal" aria-hidden="true"><span class="p">›</span> Scanning agency GitHub organizations…
-<span class="p">›</span> Collecting code.json from each repository
-<span class="ok">✓</span> Wrote agency-index.json</pre>
+  {% include 'tool-preview.html', shots: previews["index-generator"], label: "Index Generator" %}
         <div class="tool-copy">
           <h3 class="display" id="index-generator">Index Generator</h3>
           <p>Webform that scans GitHub repositories for code.json files, and generates an index file for agency-wide reporting.</p>

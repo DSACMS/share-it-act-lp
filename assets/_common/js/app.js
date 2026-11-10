@@ -1,5 +1,6 @@
 require('@uswds/uswds');
 require('./home');
+require('./previews');
 
 /* eslint no-plusplus: 0 */
 /**

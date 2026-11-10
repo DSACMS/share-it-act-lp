@@ -705,195 +705,106 @@ Layout and section styles for index.html. Decorative motion
   }
 }
 
-.form-mock {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 28px;
+/* Tool previews: real screenshots captured by scripts/capture-previews.js.
+   Fixed-shape window so cards stay even; taller images crop at the bottom and fade. */
+.tool-preview {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   border: 1px solid var(--soft-line);
   border-radius: 24px;
-  background: var(--bg);
+  background: #fff;
 
-  @media (max-width: 560px) {
-    padding: 18px;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 56px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+    pointer-events: none;
+  }
+
+  @media (forced-colors: active) {
+    border-color: CanvasText;
+
+    &::after { display: none; }
   }
 }
 
-.form-mock > div {
-  min-width: 0;
+.preview-slides {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+
+  // Outline sits inside because .tool-preview clips anything outside it
+  &:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: -3px;
+  }
 }
 
-.field-label {
-  margin-bottom: 6px;
-  font-size: 0.8125rem;
+.preview-slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: start;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Carousel controls (added by previews.js when a card has 2+ images) */
+.preview.is-enhanced .preview-slides {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar { display: none; }
+}
+
+.preview-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.preview-status {
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--muted);
 }
 
-.field {
-  display: flex;
-  align-items: center;
-  min-height: 48px;
-  padding: 0 16px;
-  border: 1px solid #c9d0d8;
-  border-radius: var(--r-sm);
-  background: var(--panel);
-  font-size: 1rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.seg {
-  display: inline-flex;
-  gap: 6px;
-  padding: 5px;
-  border-radius: 14px;
-  background: var(--soft-line);
-
-  span {
-    padding: 10px 22px;
-    border-radius: 10px;
-    font-size: 0.9375rem;
-    color: var(--muted);
-  }
-
-  span:first-child {
-    background: var(--panel);
-    color: var(--heading);
-    font-weight: 600;
-  }
-}
-
-.fake-btn {
+.preview-btn {
   display: grid;
   place-items: center;
-  min-height: 52px;
-  margin-top: 8px;
-  border-radius: var(--pill);
-  background: var(--navy);
-  color: #fff;
-  font-weight: 600;
-}
-
-/* Repository Discovery Form preview: a step-by-step questionnaire */
-.survey-mock {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 28px;
-  border: 1px solid var(--soft-line);
-  border-radius: 24px;
-  background: var(--bg);
-
-  @media (max-width: 560px) {
-    padding: 18px;
-  }
-}
-
-.survey-head {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px 16px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--muted);
-}
-
-.survey-steps {
-  display: flex;
-  gap: 4px;
-
-  i {
-    width: 18px;
-    height: 6px;
-    border-radius: var(--pill);
-    background: var(--soft-line);
-  }
-
-  .done { background: var(--primary); }
-  .current { background: var(--medium); }
-}
-
-.survey-q {
-  font: 600 1.25rem/1.3 var(--serif);
-  color: var(--heading);
-}
-
-.survey-options {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-
-  @media (max-width: 400px) {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-.opt {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 14px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: 1.5px solid var(--line);
-  border-radius: 16px;
-  background: var(--panel);
-
-  strong {
-    display: block;
-    font-size: 0.9375rem;
-    color: var(--heading);
-  }
-
-  small {
-    display: block;
-    font-size: 0.8125rem;
-    line-height: 1.35;
-    color: var(--muted);
-  }
-
-  .radio {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    margin-top: 1px;
-    border: 2px solid #71767a;
-    border-radius: 50%;
-    background: var(--panel);
-  }
-
-  &.is-picked {
-    border-color: var(--primary);
-    background: var(--tint);
-
-    .radio {
-      border-color: var(--primary);
-      box-shadow: inset 0 0 0 4px var(--panel);
-      background: var(--primary);
-    }
-  }
-}
-
-.survey-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-}
-
-.survey-back {
-  color: var(--muted);
-  font-size: 0.9375rem;
-}
-
-.survey-next {
-  padding: 10px 24px;
   border-radius: var(--pill);
-  background: var(--navy);
-  color: #fff;
-  font-size: 0.9375rem;
+  background: var(--panel);
+  color: var(--heading);
+  cursor: pointer;
+
+  &:hover { background: var(--tint); }
+
+  &:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.4;
+    background: var(--panel);
+    cursor: default;
+  }
 }
 
 .pipeline {
@@ -920,19 +831,6 @@ Layout and section styles for index.html. Decorative motion
   @media (max-width: 560px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-.terminal {
-  margin: 0;
-  padding: 20px 22px;
-  border-radius: var(--r-md);
-  background: #101c2c;
-  color: var(--on-dark);
-  font: 400 0.875rem/1.8 var(--mono);
-  overflow-x: auto;
-
-  .p { color: var(--bright); }
-  .ok { color: var(--gold); }
 }
 
 /* ---------- Documentation ---------- */

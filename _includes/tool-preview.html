@@ -1,0 +1,19 @@
+{% comment %}
+  Preview images for one tool card. `shots` comes from _data/previews.json.
+  One image is a plain picture. Several get Previous/Next buttons from previews.js;
+  without JavaScript they stay a scrollable row.
+{% endcomment %}
+<div class="preview"{% if shots.size > 1 %} data-preview data-label="{{ label | escape }}"{% endif %}>
+  <div class="tool-preview">
+    <ul class="preview-slides" role="list"{% if shots.size > 1 %} tabindex="0" aria-label="{{ label }} previews, scrollable"{% endif %}>
+      {% for shot in shots %}
+        <li class="preview-slide">
+          <img src="{{ '/img/previews/' | append: shot.file | url }}"
+               alt="{{ shot.alt | escape }}"
+               width="{{ shot.width | round }}" height="{{ shot.height | round }}"
+               loading="lazy" decoding="async">
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

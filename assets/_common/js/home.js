@@ -7,22 +7,22 @@
  * other pages. Decorative motion only runs when <html> has the `motion`
  * class, which meta.html sets for visitors who don't prefer reduced motion.
  */
-
+ 
 const EASE = 'cubic-bezier(.16, 1, .3, 1)';
 const root = document.documentElement;
 const motion = () => root.classList.contains('motion');
-
+ 
 function animate(el, keyframes, options) {
   if (el && el.animate) el.animate(keyframes, options);
 }
-
+ 
 function onFontsReady(fn) {
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fn);
 }
-
+ 
 // Lets the inline script in meta.html know this file loaded (see its fallback).
 root.dataset.homeJs = 'loaded';
-
+ 
 /* ---------- Header frosts once the page scrolls ---------- */
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
@@ -31,23 +31,23 @@ function initHeaderScroll() {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 }
-
+ 
 /* ---------- Hero: rotating agency chip with a pause control (WCAG 2.2.2) ---------- */
 const AGENCIES = ['GSA', 'HHS', 'VA', 'DOD', 'DOE', 'NASA', 'USDA', 'DOT', 'DHS', 'ED', 'DOJ', 'DOL', 'DOI', 'HUD', 'EPA', 'SBA', 'SSA', 'NSF', 'OPM'];
 const ROTATE_MS = 5000;
-
+ 
 function initAgencyRotation() {
   const chip = document.getElementById('glyph-agency');
   const toggle = document.getElementById('rotate-toggle');
   if (!chip || !toggle) return;
-
+ 
   const label = toggle.querySelector('[data-label]');
   let index = 0;
   // Visitors who prefer reduced motion start paused and can press play.
   let userPaused = !motion();
   let holdPause = false;
   let timer = null;
-
+ 
   function swap(next) {
     if (!motion()) {
       chip.textContent = next;
@@ -61,26 +61,26 @@ function initAgencyRotation() {
       { transform: 'none', opacity: 1, filter: 'blur(0)' },
     ], { duration: 450, easing: EASE });
   }
-
+ 
   function advance() {
     index = (index + 1) % AGENCIES.length;
     swap(AGENCIES[index]);
   }
-
+ 
   function restart() {
     clearInterval(timer);
     timer = setInterval(() => {
       if (!userPaused && !holdPause && !document.hidden) advance();
     }, ROTATE_MS);
   }
-
+ 
   function syncToggle() {
     const text = userPaused ? 'Play rotating agency names' : 'Pause rotating agency names';
     toggle.dataset.paused = String(userPaused);
     toggle.title = text;
     label.textContent = text;
   }
-
+ 
   // Size the chip for the longest name so the headline never reflows.
   function lockWidth() {
     const current = chip.textContent;
@@ -93,7 +93,7 @@ function initAgencyRotation() {
     chip.textContent = current;
     chip.style.minWidth = `${Math.ceil(widest)}px`;
   }
-
+ 
   chip.addEventListener('pointerenter', () => { holdPause = true; });
   chip.addEventListener('pointerleave', () => { holdPause = false; });
   toggle.addEventListener('click', () => {
@@ -107,7 +107,7 @@ function initAgencyRotation() {
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) restart();
   });
-
+ 
   lockWidth();
   onFontsReady(lockWidth);
   // Measuring is 19 forced layouts, so wait until resizing settles.
@@ -116,17 +116,17 @@ function initAgencyRotation() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(lockWidth, 150);
   });
-
+ 
   toggle.hidden = false;
   syncToggle();
   restart();
 }
-
+ 
 /* ---------- Glossary tooltips ---------- */
 const TIP_GAP = 8;
 const TIP_EDGE = 12;
 const TIP_SIDES = ['top', 'bottom', 'left', 'right'].map((side) => `usa-tooltip__body--${side}`);
-
+ 
 // USWDS centers a tooltip on its term and, when that clips, flips it to a side
 // or stretches it to half the screen. Instead keep it above the term (below if
 // the sticky header is in the way) and slide it sideways to stay on screen.
@@ -135,30 +135,30 @@ function placeTooltip(trigger, body) {
   const wrapper = trigger.parentNode;
   const header = document.querySelector('.site-header');
   const headerBottom = header ? Math.max(0, header.getBoundingClientRect().bottom) : 0;
-
+ 
   body.classList.remove('usa-tooltip__body--wrap', ...TIP_SIDES);
   body.style.margin = '0';
   const t = trigger.getBoundingClientRect();
   const w = wrapper.getBoundingClientRect();
   const above = t.top - body.offsetHeight - TIP_GAP > headerBottom;
-
+ 
   body.classList.add(above ? 'usa-tooltip__body--top' : 'usa-tooltip__body--bottom');
   body.style.top = above ? 'auto' : `calc(100% + ${TIP_GAP}px)`;
   body.style.bottom = above ? `calc(100% + ${TIP_GAP}px)` : 'auto';
-
+ 
   const center = t.left + t.width / 2;
   const maxLeft = window.innerWidth - TIP_EDGE - body.offsetWidth;
   const left = Math.max(TIP_EDGE, Math.min(center - body.offsetWidth / 2, maxLeft));
   body.style.left = `${left - w.left}px`;
   body.style.setProperty('--arrow-x', `${center - left}px`);
 }
-
+ 
 function initTooltips() {
   const bodies = new Map();
   document.querySelectorAll('.term.usa-tooltip__trigger').forEach((trigger) => {
     const body = document.getElementById(trigger.getAttribute('aria-describedby'));
     if (!body || body.querySelector('.tooltip-hint')) return;
-
+ 
     // Point to the full definition. The hint is part of the trigger's
     // aria-describedby text, so it's announced after the definition.
     const hint = document.createElement('span');
@@ -169,7 +169,7 @@ function initTooltips() {
     bodies.set(trigger, body);
   });
   if (!bodies.size) return;
-
+ 
   // USWDS positions on mouseover/focusin at document.body; these listeners on
   // the document run after it.
   const reposition = (e) => {
@@ -179,16 +179,16 @@ function initTooltips() {
   document.addEventListener('mouseover', reposition);
   document.addEventListener('focusin', reposition);
 }
-
+ 
 /* ---------- Journey: ARIA tabs with a sliding indicator ---------- */
 function initTabs() {
   const tablist = document.querySelector('[data-tabs]');
   if (!tablist) return;
-
+ 
   const tabs = Array.from(tablist.querySelectorAll('[data-tab-for]'));
   const panels = tabs.map((tab) => document.getElementById(tab.dataset.tabFor));
   if (panels.some((p) => !p)) return;
-
+ 
   tablist.setAttribute('role', 'tablist');
   tablist.setAttribute('aria-label', 'Choose your path');
   tabs.forEach((tab, i) => {
@@ -200,22 +200,22 @@ function initTabs() {
     panel.setAttribute('aria-labelledby', tab.id);
     panel.tabIndex = 0;
   });
-
+ 
   const indicator = document.createElement('span');
   indicator.className = 'tab-indicator';
   indicator.setAttribute('aria-hidden', 'true');
   tablist.appendChild(indicator);
   tablist.classList.add('has-indicator');
-
+ 
   function placeIndicator() {
     const current = tablist.querySelector('[aria-selected="true"]');
     if (!current) return;
     indicator.style.width = `${current.offsetWidth}px`;
     indicator.style.transform = `translateX(${current.offsetLeft}px)`;
   }
-
+ 
   let ready = false;
-
+ 
   function select(tab, focus) {
     const changed = ready && tab.getAttribute('aria-selected') !== 'true';
     tabs.forEach((t, i) => {
@@ -226,7 +226,7 @@ function initTabs() {
     });
     placeIndicator();
     if (focus) tab.focus();
-
+ 
     const panel = panels[tabs.indexOf(tab)];
     if (changed && motion()) {
       animate(panel, [{ opacity: 0, transform: 'translateY(18px) scale(.99)' }, { opacity: 1, transform: 'none' }], { duration: 600, easing: EASE });
@@ -237,7 +237,7 @@ function initTabs() {
       });
     }
   }
-
+ 
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', () => select(tab, false));
     tab.addEventListener('keydown', (e) => {
@@ -252,7 +252,7 @@ function initTabs() {
       }
     });
   });
-
+ 
   // Deep links to anything inside a panel (e.g. #for-agencies) open that panel.
   function selectFromHash() {
     let id;
@@ -270,7 +270,7 @@ function initTabs() {
     }
     return false;
   }
-
+ 
   tablist.hidden = false;
   if (!selectFromHash()) select(tabs[0], false);
   ready = true;
@@ -279,7 +279,7 @@ function initTabs() {
   onFontsReady(placeIndicator);
   requestAnimationFrame(() => tablist.classList.add('animate'));
 }
-
+ 
 /* ---------- Journey: checklist progress (starts fresh on every visit) ---------- */
 function initChecklists() {
   document.querySelectorAll('[data-checklist]').forEach((panel) => {
@@ -289,7 +289,7 @@ function initChecklists() {
     const bar = panel.querySelector('[role="progressbar"]');
     const doneMsg = panel.querySelector('[data-done]');
     if (!boxes.length || !progress || !count || !bar) return;
-
+ 
     // Each box is one task, except an either/or group (.checks--choice), which
     // counts as a single task done by checking any one of its boxes.
     const tasks = [];
@@ -306,7 +306,7 @@ function initChecklists() {
         tasks.push(members);
       }
     });
-
+ 
     function update() {
       const done = tasks.filter((members) => members.some((b) => b.checked)).length;
       const pct = Math.round((done / tasks.length) * 100);
@@ -316,7 +316,7 @@ function initChecklists() {
       bar.firstElementChild.style.width = `${pct}%`;
       if (doneMsg) doneMsg.hidden = done < tasks.length;
     }
-
+ 
     boxes.forEach((box) => {
       // Some browsers restore checkbox state on reload; always start unchecked.
       box.checked = false;
@@ -333,14 +333,14 @@ function initChecklists() {
         }
       });
     });
-
+ 
     progress.hidden = false;
     update();
   });
 }
-
+ 
 /* ---------- Decorative motion (only with .motion) ---------- */
-
+ 
 // Split a heading's words into spans for a staggered reveal. The visual copy is
 // hidden from assistive tech and the original wording is kept in a sr-only span,
 // so screen readers read the heading as one phrase.
@@ -348,7 +348,7 @@ function splitWords(el) {
   const spoken = el.cloneNode(true);
   spoken.querySelectorAll('[aria-hidden="true"]').forEach((n) => n.remove());
   const text = spoken.textContent.replace(/\s+/g, ' ').trim();
-
+ 
   const visual = document.createElement('span');
   visual.setAttribute('aria-hidden', 'true');
   let i = 0;
@@ -373,7 +373,7 @@ function splitWords(el) {
       visual.appendChild(node);
     }
   });
-
+ 
   const sr = document.createElement('span');
   sr.className = 'usa-sr-only';
   sr.textContent = text;
@@ -381,20 +381,20 @@ function splitWords(el) {
   el.append(sr, visual);
   el.classList.add('split');
 }
-
+ 
 function initMotion() {
   if (!motion() || !document.querySelector('.hero')) return;
-
+ 
   const heroTitle = document.getElementById('hero-title');
   splitWords(heroTitle);
   heroTitle.style.setProperty('--d0', '120ms');
   const headings = Array.from(document.querySelectorAll('.h2, .cta-card h2'));
   headings.forEach(splitWords);
-
+ 
   // Code card: each line fades in
   const code = document.querySelector('.code-card code');
   code.innerHTML = code.innerHTML.split('\n').map((line, i) => `<span class="line" style="--i:${i}">${line}</span>`).join('');
-
+ 
   // Hero load sequence
   const heroBits = [
     [document.querySelector('.hero .eyebrow'), 0],
@@ -419,7 +419,7 @@ function initMotion() {
   };
   onFontsReady(startHero);
   setTimeout(startHero, 700);
-
+ 
   // Gentle 3D tilt that follows the pointer
   if (window.matchMedia('(hover: hover)').matches) {
     card.addEventListener('pointermove', (e) => {
@@ -435,7 +435,7 @@ function initMotion() {
       card.style.setProperty('--rx', '0deg');
     });
   }
-
+ 
   // Scroll reveals, staggered among siblings, in two steps:
   //  1. arm: just before an element scrolls in, hide it (`.pre-reveal`). Arming only
   //     starts after the visitor's first scroll, so the page at load (and what
@@ -460,7 +460,7 @@ function initMotion() {
       targets.push(el);
     });
   });
-
+ 
   function reveal(el) {
     const delay = delays.get(el) || 0;
     animate(el, [{ opacity: 0, transform: 'translateY(28px)' }, { opacity: 1, transform: 'none' }], {
@@ -473,7 +473,7 @@ function initMotion() {
       });
     }
   }
-
+ 
   function revealWords(el) {
     el.querySelectorAll('.w').forEach((word) => {
       animate(word, [
@@ -484,9 +484,9 @@ function initMotion() {
       });
     });
   }
-
+ 
   const armed = new Set();
-
+ 
   const shower = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting || !armed.has(entry.target)) return;
@@ -498,7 +498,7 @@ function initMotion() {
       else reveal(el);
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-
+ 
   const armer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -515,7 +515,7 @@ function initMotion() {
       shower.observe(el);
     });
   }, { rootMargin: '0px 0px 30% 0px' });
-
+ 
   const startArming = () => {
     targets.forEach((el) => armer.observe(el));
     headings.filter(belowFold).forEach((el) => armer.observe(el));
@@ -523,103 +523,22 @@ function initMotion() {
     if (pipelineEl && belowFold(pipelineEl)) armer.observe(pipelineEl);
   };
   window.addEventListener('scroll', startArming, { once: true, passive: true });
-
-  // Tools: the pipeline runs, the terminal and form type themselves out.
+ 
+  // Tools: the pipeline runs once it's on screen.
   const pipeline = document.querySelector('.pipeline');
+  if (!pipeline) return;
   pipeline.querySelectorAll('li').forEach((li, i) => li.style.setProperty('--i', i));
-
-  const terminal = document.querySelector('.terminal');
-  const termLines = [
-    { cls: 'p', mark: '›', text: 'Scanning agency GitHub organizations…' },
-    { cls: 'p', mark: '›', text: 'Collecting code.json from each repository' },
-    { cls: 'ok', mark: '✓', text: 'Wrote agency-index.json' },
-  ];
-  // One empty row per line, so the box is full height from the start and the
-  // text types into those rows instead of growing the box.
-  terminal.innerHTML = termLines.map((_, i) => `<div>${i ? '&nbsp;' : '<span class="caret"></span>'}</div>`).join('');
-
-  function typeTerminal(el) {
-    const rows = Array.from(el.children);
-    let li = 0;
-    let ci = 0;
-    let line = null;
-    const caret = el.querySelector('.caret');
-    function tick() {
-      if (li >= termLines.length) {
-        // Stop blinking once typing is done (WCAG 2.2.2)
-        setTimeout(() => caret.remove(), 1200);
-        return;
-      }
-      const L = termLines[li];
-      if (!line) {
-        line = rows[li];
-        line.innerHTML = `<span class="${L.cls}">${L.mark}</span> <span class="t"></span>`;
-        // The caret lives at the end of the current line, so move it there.
-        line.appendChild(caret);
-      }
-      const t = line.querySelector('.t');
-      if (ci < L.text.length) {
-        t.textContent += L.text[ci++];
-        setTimeout(tick, 22);
-      } else {
-        li++;
-        ci = 0;
-        line = null;
-        setTimeout(tick, 380);
-      }
-    }
-    setTimeout(tick, 300);
-  }
-
-  const forms = Array.from(document.querySelectorAll('.form-mock')).map((form) => {
-    const field = form.querySelector('.field');
-    const text = field.textContent;
-    field.innerHTML = '<span class="t"></span><span class="caret"></span>';
-    return { form, field, text };
-  });
-
-  function typeForm(entry) {
-    const t = entry.field.querySelector('.t');
-    let i = 0;
-    (function tick() {
-      if (i < entry.text.length) {
-        t.textContent += entry.text[i++];
-        setTimeout(tick, 55);
-      } else {
-        setTimeout(() => {
-          const caret = entry.field.querySelector('.caret');
-          if (caret) caret.remove();
-          entry.form.querySelector('.fake-btn').classList.add('pulse');
-        }, 500);
-      }
-    }());
-  }
-
-  const survey = document.querySelector('.survey-mock');
-
-  // Tool illustrations play once they're actually on screen.
+ 
   const player = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      const el = entry.target;
-      player.unobserve(el);
-      if (el === pipeline) {
-        setTimeout(() => el.classList.add('run'), 250);
-      } else if (el === terminal) {
-        typeTerminal(el);
-      } else if (el === survey) {
-        setTimeout(() => el.classList.add('play'), 200);
-      } else {
-        typeForm(forms.find((f) => f.form === el));
-      }
+      player.unobserve(entry.target);
+      setTimeout(() => entry.target.classList.add('run'), 250);
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
   player.observe(pipeline);
-  if (survey) player.observe(survey);
-  player.observe(terminal);
-  forms.forEach(({ form }) => player.observe(form));
 }
-
+ 
 function init() {
   [initHeaderScroll, initTooltips, initAgencyRotation, initTabs, initChecklists].forEach((setup) => {
     try {
@@ -635,7 +554,7 @@ function init() {
     root.classList.remove('motion');
   }
 }
-
+ 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {

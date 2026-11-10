@@ -1,0 +1,38 @@
+{
+  "web-form-generator": [
+    {
+      "file": "web-form-generator-step-1.png",
+      "alt": "Web Form Generator step 1: choose your project's classification: Open Source, Government Wide Reuse, or None of the above. Open Source is selected.",
+      "width": 602,
+      "height": 451
+    },
+    {
+      "file": "web-form-generator-step-2.png",
+      "alt": "Web Form Generator step 2: a GitHub repository URL field, filled in with a sample repository, used to pre-fill the form.",
+      "width": 602,
+      "height": 451
+    }
+  ],
+  "repo-discovery-form": [
+    {
+      "file": "repo-discovery-form-top.png",
+      "alt": "Repository Discovery Form: the title and introduction, followed by the first fields, Repository Name and Repository URL, filled in with sample values.",
+      "width": 666,
+      "height": 499
+    },
+    {
+      "file": "repo-discovery-form-fields.png",
+      "alt": "Repository Discovery Form fields: Repository Name, Repository URL, FISMA System Identifier, and Repository Owner, each with a short description. Name and URL are filled in with sample values.",
+      "width": 666,
+      "height": 499
+    }
+  ],
+  "index-generator": [
+    {
+      "file": "index-generator-form.png",
+      "alt": "Index Generator form with an agency name, two GitHub organizations, and a version selected, above the Generate Index button.",
+      "width": 864,
+      "height": 648
+    }
+  ]
+}
