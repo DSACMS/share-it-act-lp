@@ -7,7 +7,7 @@ module.exports = {
     // that causes intermittent pa11y errors
     hideElements: "iframe, div[style*='display: none;'], [data-pa11y-ignore], a[href*='/TODO/",
     chromeLaunchConfig: {
-      executablePath: "/usr/bin/google-chrome"
+      executablePath: process.env.CHROME_PATH || "/usr/bin/google-chrome"
     }
   },
   urls: [

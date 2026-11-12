@@ -152,6 +152,7 @@ const previews = [
  
       manifest[tool] = manifest[tool] || [];
       manifest[tool].push({ file: `${tool}-${name}.png`, alt, ...pngSize(path) });
+      // eslint-disable-next-line no-console
       console.log(`captured ${tool}-${name}`);
     }
  
