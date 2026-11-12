@@ -1,0 +1,55 @@
+name: Update Tool Previews
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * 1' # Mondays, 09:00 UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-previews
+  cancel-in-progress: false
+
+jobs:
+  update-previews:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+
+      - name: Set up Node
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # CI has no proxy, so PLAYWRIGHT_CHANNEL stays unset and the script
+      # uses Playwright's own Chromium, installed here.
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture previews
+        run: npm run previews
+
+      # If nothing changed, this step does nothing (no empty PR).
+      - name: Open pull request with changed images
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676
+        with:
+          add-paths: |
+            assets/_common/_img/previews
+            _data/previews.json
+          branch: chore/update-previews
+          commit-message: 'chore: update tool preview screenshots'
+          title: 'chore: update tool preview screenshots'
+          body: |
+            Automated run of `npm run previews`.
+            Review the changed images in the "Files changed" tab before merging.
+            The live tools may have changed, so check that each screenshot still looks right.
+          delete-branch: true
